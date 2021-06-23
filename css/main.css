@@ -1,0 +1,146 @@
+body {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #4E937A;
+}
+
+.welcome {
+  position: absolute;
+  bottom: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Cantata+One", sans-serif;
+  font-weight: 100;
+}
+.welcome__message {
+  margin: 15px 0px;
+  font-size: 24px;
+  color: #B2ABF2;
+}
+.welcome__wrap {
+  font-size: 35px;
+  color: #EFF6EE;
+  overflow: hidden;
+  height: 40px;
+}
+.welcome__wrap__namelist {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: change;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.welcome__enter {
+  margin: 20px 0px;
+  opacity: 45%;
+  color: #B2ABF2;
+}
+
+@-webkit-keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+@-webkit-keyframes change {
+  0%, 16%, 100% {
+    transform: translate3d(0, -25%, 0);
+  }
+  20%, 36% {
+    transform: translate3d(0, 0%, 0);
+  }
+  40%, 56% {
+    transform: translate3d(0, -50%, 0);
+  }
+  60%, 76% {
+    transform: translate3d(0, -75%, 0);
+  }
+  80%, 96% {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+@-o-keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+@-o-keyframes change {
+  0%, 16%, 100% {
+    transform: translate3d(0, -25%, 0);
+  }
+  20%, 36% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 56% {
+    transform: translate3d(0, -50%, 0);
+  }
+  60%, 76% {
+    transform: translate3d(0, -75%, 0);
+  }
+  80%, 96% {
+    transform: translate3d(0, -25%, 0);
+  }
+}
+@-moz-keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+@-moz-keyframes change {
+  0%, 16%, 100% {
+    transform: translate3d(0, -25%, 0);
+  }
+  20%, 36% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 56% {
+    transform: translate3d(0, -50%, 0);
+  }
+  60%, 76% {
+    transform: translate3d(0, -75%, 0);
+  }
+  80%, 96% {
+    transform: translate3d(0, -25%, 0);
+  }
+}
+@keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+@keyframes change {
+  0%, 16%, 100% {
+    transform: translate3d(0, -25%, 0);
+  }
+  20%, 36% {
+    transform: translate3d(0, 0%, 0);
+  }
+  40%, 56% {
+    transform: translate3d(0, -50%, 0);
+  }
+  60%, 76% {
+    transform: translate3d(0, -75%, 0);
+  }
+  80%, 96% {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
