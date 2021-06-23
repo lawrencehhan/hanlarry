@@ -73,10 +73,10 @@ body {
   
   @-o-keyframes change {
     0%, 16%, 100% {transform:translate3d(0,-25%,0);}
-    20%, 36% {transform:translate3d(0,0,0);}
+    20%, 36% {transform:translate3d(0,0%,0);}
     40%, 56% {transform:translate3d(0,-50%,0);}
     60%, 76% {transform:translate3d(0,-75%,0);}
-    80%, 96% {transform:translate3d(0,-25%,0);}
+    80%, 96% {transform:translate3d(0,-50%,0);}
   }
   
   @-moz-keyframes opacity {
@@ -86,10 +86,10 @@ body {
   
   @-moz-keyframes change {
     0%, 16%, 100% {transform:translate3d(0,-25%,0);}
-    20%, 36% {transform:translate3d(0,0,0);}
+    20%, 36% {transform:translate3d(0,0%,0);}
     40%, 56% {transform:translate3d(0,-50%,0);}
     60%, 76% {transform:translate3d(0,-75%,0);}
-    80%, 96% {transform:translate3d(0,-25%,0);}
+    80%, 96% {transform:translate3d(0,-50%,0);}
   }
   
   @keyframes opacity {
