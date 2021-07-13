@@ -41,13 +41,21 @@ body {
   opacity: 45%;
   color: #B2ABF2;
 }
+.welcome:active {
+  -webkit-animation-name: opacity;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
 
 @-webkit-keyframes opacity {
-  0%, 100% {
-    opacity: 0;
+  0% {
+    opacity: 1;
   }
-  50% {
-    opacity: 0.5;
+  100% {
+    opacity: 0;
   }
 }
 @-webkit-keyframes change {
@@ -68,11 +76,11 @@ body {
   }
 }
 @-o-keyframes opacity {
-  0%, 100% {
-    opacity: 0;
+  0% {
+    opacity: 1;
   }
-  50% {
-    opacity: 0.5;
+  100% {
+    opacity: 0;
   }
 }
 @-o-keyframes change {
@@ -93,11 +101,11 @@ body {
   }
 }
 @-moz-keyframes opacity {
-  0%, 100% {
-    opacity: 0;
+  0% {
+    opacity: 1;
   }
-  50% {
-    opacity: 0.5;
+  100% {
+    opacity: 0;
   }
 }
 @-moz-keyframes change {
@@ -118,11 +126,11 @@ body {
   }
 }
 @keyframes opacity {
-  0%, 100% {
-    opacity: 0;
+  0% {
+    opacity: 1;
   }
-  50% {
-    opacity: 0.5;
+  100% {
+    opacity: 0;
   }
 }
 @keyframes change {
