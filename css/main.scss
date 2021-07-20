@@ -2,9 +2,27 @@ body {
     width: 100%;
     height: 100%;
     position: fixed;
+    background-color: #053b06;
     background-color: #4E937A;
+    transition: background-color 1.5s ease;
   }
-  
+
+
+.my_container{
+  opacity: 0;
+  transition: opacity 1.2s ease;
+
+  & .my_row{
+    border: 3px solid red;
+  }
+  & .my_col{
+    border: 3px dotted blue;
+  }
+} 
+
+
+
+
   .welcome {
     position: absolute;
     bottom: 45%;
@@ -15,13 +33,15 @@ body {
     font-family: 'Cantata+One', sans-serif;
     font-weight: 100;
 
-    transition: opacity 1s;
+    transition: opacity 1.5s ease;
 
     &__message{
       margin: 15px 0px;
 
       font-size: 24px;
       color: #B2ABF2;
+      color: #FBAF00;
+      color: #F4A261;
     }
     
     &__wrap {
@@ -30,7 +50,7 @@ body {
 
       // Hides list of cycling names
       overflow: hidden;
-      height: 40px;
+      height: 54px;
   
       &__namelist{
         padding: 0;
@@ -52,6 +72,7 @@ body {
 
       opacity: 45%;
       color: #B2ABF2;
+      color: #F4A261;
     }
 
     &:active{

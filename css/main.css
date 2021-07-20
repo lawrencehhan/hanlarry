@@ -2,7 +2,20 @@ body {
   width: 100%;
   height: 100%;
   position: fixed;
+  background-color: #053b06;
   background-color: #4E937A;
+  transition: background-color 1.5s ease;
+}
+
+.my_container {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.my_container .my_row {
+  border: 3px solid red;
+}
+.my_container .my_col {
+  border: 3px dotted blue;
 }
 
 .welcome {
@@ -13,17 +26,20 @@ body {
   text-align: center;
   font-family: "Cantata+One", sans-serif;
   font-weight: 100;
+  transition: opacity 1.5s ease;
 }
 .welcome__message {
   margin: 15px 0px;
   font-size: 24px;
   color: #B2ABF2;
+  color: #FBAF00;
+  color: #F4A261;
 }
 .welcome__wrap {
   font-size: 35px;
   color: #EFF6EE;
   overflow: hidden;
-  height: 40px;
+  height: 55px;
 }
 .welcome__wrap__namelist {
   padding: 0;
@@ -40,6 +56,7 @@ body {
   margin: 20px 0px;
   opacity: 45%;
   color: #B2ABF2;
+  color: #F4A261;
 }
 .welcome:active {
   -webkit-animation-name: opacity;
