@@ -1,0 +1,56 @@
+$toggle-animation-speed: 0.4s;
+$toggle-height: 32px;
+$toggle-width: 54px;
+$switch-offset: 4px;
+$toggle-off-color: #2a2b2a27;
+$toggle-on-color: #00c3e680;
+$switch-color: white;
+
+.button-row{
+    padding: 8px;
+    display: flex;
+    margin: 0 4px 0 4px;
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    opacity: 0.7;
+    .toggle-button {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+    .toggle-label {
+        width: $toggle-width;
+        height: $toggle-height;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        cursor: pointer;
+        background: $toggle-off-color;
+        transition: background-color $toggle-animation-speed;
+        .toggle-switch {
+            height: calc(0.75 * #{$toggle-height});
+            width: calc(0.75 * #{$toggle-height});
+            left: $switch-offset;
+            bottom: $switch-offset;
+            border-radius: 36px;
+            box-shadow: 0 0 8px 0 rgba(10, 10, 10, 0.45);
+            position: absolute;
+            transition: $toggle-animation-speed;
+            background: $switch-color;
+        }
+    }
+    // Changes applied to toggle-button/toggle-switch
+    .toggle-button:checked + .toggle-label .toggle-switch {
+        left: calc(100% - #{$switch-offset});
+        transform: translateX(-100%);
+    }
+    .toggle-button:checked + .toggle-label {
+        background-color: $toggle-on-color;
+    }
+    .toggle-label:active .toggle-switch {
+        width: $toggle-width;
+    }
+}

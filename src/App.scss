@@ -1,0 +1,22 @@
+$light-bg-color: #FCF7FF;
+$light-text-color: #2A2B2A;
+$dark-bg-color: #2A2B2A;
+$dark-text-color: #FCF7FF;
+
+body {
+  margin: 0;
+}
+.app {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $light-bg-color;
+  font-family: 'Bebas Neue', 'Pluse Jakarta Sans', 'Vazirmatn', sans-serif;
+}
+.dark {
+  background-color: $dark-bg-color;
+  color: $dark-text-color;
+}
+  

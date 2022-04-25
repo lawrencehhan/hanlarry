@@ -1,0 +1,15 @@
+.glasses-container { 
+  border: solid 1px black;
+  text-align: center;
+  width: 602px;
+  height: 324px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .glasses-icon {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+  }
+}
