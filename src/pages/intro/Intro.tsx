@@ -1,11 +1,12 @@
 import React from "react";
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import './intro.css';
 import Glasses from '../../assets/Glasses'
 
 
 interface GlassesProp {
     glassesDark: boolean;
+    entered?: boolean;
 }
 
 export default function Intro(props:GlassesProp) {
@@ -22,23 +23,48 @@ export default function Intro(props:GlassesProp) {
     }
     return (
         <div className="intro-container">
-            <motion.div className="intro-intro" 
-                initial="hiddenDown"
-                animate="visible"
-                variants={variants}
-                transition={transition}
-            >
-                    hi there! my name is Lawrence Han
-            </motion.div>
-            <Glasses animated={true} darkMode={props.glassesDark}/>
-            <motion.div className="intro-prompt"
-                initial="hiddenUp"
-                animate="visibleHalf"
-                variants={variants}
-                transition={transition}                
-            >
-                click / tap anywhere
-            </motion.div>
+            <AnimatePresence>
+                {/* conditionally render each of this after passign in state as prop */}
+                {!props.entered && (
+                    <motion.div className="intro-intro" 
+                        key="introTitle"
+                        initial="hiddenDown"
+                        animate="visible"
+                        exit= {{
+                            opacity: 0,
+                            y: -20,
+                            transition: {
+                                delay: 0,
+                                duration: 0.5
+                            }
+                        }}
+                        variants={variants}
+                        transition={transition}
+                    >
+                            hi there! my name is Lawrence Han
+                    </motion.div>
+                )}
+                <Glasses animated={true} darkMode={props.glassesDark}/>
+                {!props.entered && (
+                    <motion.div className="intro-prompt"
+                        key="introPrompt"
+                        initial="hiddenUp"
+                        animate="visibleHalf"
+                        exit= {{
+                            opacity: 0,
+                            y: 20,
+                            transition: {
+                                delay: 0,
+                                duration: 0.5
+                            }
+                        }}
+                        variants={variants}
+                        transition={transition}                
+                    >
+                        click / tap anywhere
+                    </motion.div>  
+                )}
+            </AnimatePresence>
         </div>
     )
 }

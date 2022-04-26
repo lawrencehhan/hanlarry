@@ -1,14 +1,22 @@
-.glasses-container {
+.home-container {
+  position: absolute;
+  height: 90%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: solid 1px black;
+}
+.home-container .glasses-container {
   text-align: center;
   width: 602px;
   height: 324px;
-  position: relative;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.glasses-container .glasses-icon {
+.home-container .glasses-container .glasses-icon {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);

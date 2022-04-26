@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useCallback} from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import './App.css';
 import Intro from './pages/intro/Intro'
 import Home from './pages/home/Home'
@@ -22,17 +23,22 @@ export default function App() {
     }
   }, [enter])
 
-  const [darkMode, setDarkMode] = useState<boolean>(false)
+
+  const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [darkMode, setDarkMode] = useState<boolean>(isDarkMode)
   const handleDarkToggle = (event:React.ChangeEvent) => {
     setDarkMode( prevDarkMode => !prevDarkMode )
-    console.log('in THE TOGGLE BUTTON')
     event.stopPropagation()
   }
+
 
   return (
     <>
       <div className={`app ${darkMode ? "dark" : "" }`}>
-        { enter ? <Home glassesDark={darkMode}/> : <Intro glassesDark={darkMode}/> }
+        <AnimatePresence>
+          <Intro glassesDark={darkMode} entered={enter}/>
+        </AnimatePresence>
+        { enter && <Home darkMode={darkMode} />}
       </div>
       <DarkToggle darkMode={darkMode} handleDarkToggle={handleDarkToggle}/> 
     </>
