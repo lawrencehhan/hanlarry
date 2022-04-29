@@ -12,6 +12,7 @@ export default function HomeProfile(props:HomeProfile) {
 
     return(
         <motion.div className={`home-col ${darkMode && "dark"}`}>
+            <motion.circle r="50" stroke="black" stroke-width="1"></motion.circle>
             <Disk darkMode={darkMode} darkColor={darkColor} lightColor={lightColor} />
         </motion.div>
     )
