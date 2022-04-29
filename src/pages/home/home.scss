@@ -18,7 +18,6 @@
     .glasses-icon {
         position: absolute;
         left: 50%;
-        transform: translate(-50%, 0);
     }
   }
   //font-family: 'Bebas Neue', 'Plus Jakarta Sans', 'Vazirmatn', sans-serif;
@@ -32,8 +31,8 @@
     align-content: center;
     justify-content: center;
     border: solid 0.8px black;
+
     .home-text{
-      border: solid red;
       width: 100%;
       .letter { 
         display: inline-flex;
@@ -67,7 +66,6 @@
     .home-text-intro > * {
       z-index: 100;
     }
-
     .home-text-passage {
       font-size: 1rem; // 16px
       font-family: 'Vazirmatn';
@@ -75,13 +73,25 @@
       margin-left: 15%;
     }
   }
-  .diskSVG {
-    // position: absolute;
-    // bottom: 19%;
-    // left: 23%;
+
+  .home-profile {
+    height: 70%;
+    .svg-circle {
+      position: absolute;
+    }
+    .profile-img {
+      position: absolute;
+      opacity: 0.75;
+    }
+    .svg-disk {
+      position: absolute;
+      bottom: 0;
+    }
   }
 }
 
+
+// Dark Mode Settings
 .home-container.dark {
   border: solid 1.2px white;
 }

@@ -20,7 +20,6 @@
 .home-container .glasses-container .glasses-icon {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 0);
 }
 .home-container .home-col {
   position: relative;
@@ -34,7 +33,6 @@
   border: solid 0.8px black;
 }
 .home-container .home-col .home-text {
-  border: solid red;
   width: 100%;
 }
 .home-container .home-col .home-text .letter {
@@ -73,6 +71,21 @@
   width: 65%;
   margin-left: 15%;
 }
+.home-container .home-profile {
+  height: 70%;
+}
+.home-container .home-profile .svg-circle {
+  position: absolute;
+}
+.home-container .home-profile .profile-img {
+  position: absolute;
+  opacity: 0.75;
+}
+.home-container .home-profile .svg-disk {
+  position: absolute;
+  bottom: 0;
+}
+
 .home-container.dark {
   border: solid 1.2px white;
 }

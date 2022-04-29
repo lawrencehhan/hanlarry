@@ -21,11 +21,11 @@ export default function Disk(props:Disk) {
         height="120"
         fill="none"
         viewBox="0 0 218 120"
-        className="diskSVG"
+        className="svg-disk"
         initial="hidden"
         animate="visible"
         variants={variants}
-        transition={{delay: 2, duration: 2, type: "spring"}}
+        transition={{delay: 3.5, duration: 2, type: "spring"}}
         >
             <mask id="path-1-inside-1_2_4" fill={darkMode ? lightColor : lightColor}>
                 <path

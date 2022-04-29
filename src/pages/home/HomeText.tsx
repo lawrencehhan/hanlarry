@@ -84,7 +84,7 @@ export default function HomeText(props:HomeText) {
     const {darkMode, darkColor, lightColor} = props;
 
     return(
-        <motion.div className={`home-col ${darkMode && "dark"}`}
+        <motion.div className={`home-col home-text-col ${darkMode && "dark"}`}
             variants={textBanner}
             initial='hidden'
             animate='visible'
