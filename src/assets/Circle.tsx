@@ -13,29 +13,32 @@ export default function Circle(props:Circle) {
     const {darkMode, animated, darkColor, lightColor, xpos, ypos} = props;
     const strokeColor = darkMode ? lightColor : darkColor;
     const strokeTransition = {
-        duration: 6,
+        delay: 4,
+        duration: 5,
         ease: [0.6, 0.01, -0.05, 0.95]
     };
+    const circleTransition = {
+        delay: 4,
+        repeat: Infinity,
+        repeatType: undefined,
+        duration: 8,
+        ease: "easeInOut",
+    }
     const circleVariant = {
         hidden: { x: xpos, y: ypos, },
         visible: {
-            y: ypos*-1,
-            x: xpos*-1,
+            x: [xpos, xpos*1.2, xpos, xpos*0.8, xpos],
+            y: [ypos, ypos*-1, ypos, ypos*-1, ypos],
+            transition: circleTransition,
         }
     }
 
-    const circleTransition = {
-        repeat: Infinity,
-        repeatType: "reverse",
-        duration: 3,
-    }
     
     return (
         <motion.svg className="svg-circle" height="300" width="300"
             initial="hidden"
             animate="visible"
             variants={!animated ? undefined : circleVariant}
-            // transition={circleTransition}
         >
             <motion.circle 
                 cx="150" 

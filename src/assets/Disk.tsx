@@ -9,9 +9,20 @@ interface Disk {
 
 export default function Disk(props:Disk) {
     const {darkMode, darkColor, lightColor} = props
-    const variants = {
-        hidden: { opacity: 0, y: 40},
-        visible: { opacity: 1, y: 0}
+    
+    const diskVariant = {
+        hidden: { opacity: 0, y: 100},
+        visible: { 
+            opacity: 1, 
+            y: -12,
+            transition: {
+                delay: 3.75, 
+                type: "spring",
+                velocity: 2, // 2 default
+                mass: 4, // 1 default
+                damping: 13, // 10 default
+            }
+        }
     }
 
     return (
@@ -24,8 +35,7 @@ export default function Disk(props:Disk) {
         className="svg-disk"
         initial="hidden"
         animate="visible"
-        variants={variants}
-        transition={{delay: 3.5, duration: 2, type: "spring"}}
+        variants={diskVariant}
         >
             <mask id="path-1-inside-1_2_4" fill={darkMode ? lightColor : lightColor}>
                 <path

@@ -16,42 +16,43 @@ interface AnimatedLetters {
 const textBanner = {
     visible: { 
         transition: {
-            delayChildren: 0.2,
-            staggerChildren: 0.1
+            delayChildren: 7.2,
+            staggerChildren: 0.05
         }
     }
 };
 const textLetter_01 = {
-    hidden: { y: -300, opacity: 0 },
+    hidden: { y: -200, opacity: 0 },
     visible: {
         y: 0,
         opacity: 1,
         transition: {
-            ease: [0.6, 0.01, -0.05, 0.95],
+            ease: [0.33, 1, 0.68, 1],
             duration: 1
         } 
     }
 };
 const textLetter_02 = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, x: 10 },
     visible: {
         opacity: 1,
+        x: 0,
         transition: {
-            ease: [0.6, 0.01, -0.05, 0.95],
-            duration: 0.5
+            ease: "easeOut",
+            duration: 0.25
         } 
     }
 };
 const textHighlight = {
-    hidden: { y: 100, opacity: 0, rotate: 0},
+    hidden: { y: 50, opacity: 0, rotate: 0},
     visible: {
         y: 0,
         opacity: 1,
         rotate: -3,
         transition: {
             ease: "easeOut",
-            duration: 1,
-            delay: 3
+            duration: 1.5,
+            delay: 9,
         } 
     }
 };
@@ -73,6 +74,7 @@ const AnimatedLetters = (props:AnimatedLetters) => {
                         <motion.span
                             className="highlightBox"
                             variants={textHighlight}>
+                                &nbsp;
                         </motion.span>
                     }
                 </motion.span>

@@ -2,26 +2,118 @@ $light-bg-color: #FCF7FF;
 $light-text-color: #2A2B2A;
 $dark-bg-color: #2A2B2A;
 $dark-text-color: #FCF7FF;
+$transparent-bg: #2a2b2a00;
 
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   margin: 0;
   width: 100vw;
+  overflow-x: hidden;
   #root {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    .bg {
+      height: 100%;
+      width: 100%;
+      background-color: black;
+      position: absolute;
+      // z-index: 500;
+    }
+  }
+}
+.navbar {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  list-style-type: none;
+  background-color: rgba(0,0,0,0);
+  border-bottom: solid 1px $dark-bg-color;
+  overflow: hidden;
+  position: fixed;
+  position: -webkit-fixed;
+  z-index: 101;
+  margin: 0;
+  top: 0;
+  width: 100%;
+  height: 7vh;
+  display: inline-flex;
+  align-items: center;
+  justify-content: right;
+  li {
+    a{
+      padding-right:1.5rem;
+      position: relative;
+    }
+    a::after {
+      content: "";
+      position: absolute;
+      top: 115%;
+      height: 1.5px;
+      width: 0%;
+      left: 5%;
+      background-color: $dark-bg-color;
+      opacity: 0.5;
+      transition: all 0.4s ease-in-out;
+    }
+    &:hover {
+      cursor: pointer;
+      a::after {
+        width: 85%;
+        transition: 0.4s ease-in-out;
+      }
+    }
+  }
+  .li-home {
+    position: absolute;
+    left: 1.5rem;
+    font-size: 1.125rem;
+    a::before {
+      content: "";
+      position: absolute;
+      height: 0.75rem;
+      width: 85%;
+      margin-top: 0.5rem;
+      background-image: linear-gradient(-120deg, #e0afa01d, #b4d5fe92 95%, #88d4984f);
+      border-radius: 1rem 0 1rem 0;
+      padding: 3px 6px;
+      z-index: 100;
+    }
   }
 }
 .app {
   position: relative;
-  height: 100vh;
+  // height: 100%;
   width: 100%;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 7vh;
+  // align-items: center;
   justify-content: center;
   background-color: $light-bg-color;
-  font-family: 'Bebas Neue', 'Pluse Jakarta Sans', 'Vazirmatn', sans-serif;
+  font-family: 'Bebas Neue', 'Plus Jakarta Sans', 'Vazirmatn', sans-serif;
+  .page {
+    border: 1px solid black;
+    position: relative;
+    height: 86vh;// change back to 100% later
+    width: 88%; // change back to 100% later
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .dark {
   background-color: $dark-bg-color;
+  background-color: $transparent-bg;
   color: $dark-text-color;
+}
+.navbar.dark {
+  border-bottom: solid 1px $light-bg-color;
+  background-color: rgba(201, 51, 51, 0.5);
+  a::after {
+    background-color: $light-bg-color;
+  }
 }
   

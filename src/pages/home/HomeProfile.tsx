@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import ProfileImg from '../../assets/profile_image_md.png';
 import Circle from '../../assets/Circle';
+import ProfileImg from '../../assets/ProfileImg';
 import Disk from '../../assets/Disk';
 interface HomeProfile {
     darkMode: boolean;
@@ -14,14 +14,9 @@ export default function HomeProfile(props:HomeProfile) {
     const strokeColor = darkMode ? lightColor : darkColor;
     return(
         <motion.div className={`home-col home-profile ${darkMode && "dark"}`}>
-            <Circle animated={false} xpos={-70} ypos={-140} darkMode={darkMode} darkColor={darkColor} lightColor={lightColor} />
-            <Circle animated={false} xpos={70} ypos={100} darkMode={darkMode} darkColor={darkColor} lightColor={lightColor} />
-            <motion.img
-                className="profile-img"
-                src={ProfileImg}
-            >
-                
-            </motion.img>
+            <Circle animated={true} xpos={-70} ypos={-50} darkMode={darkMode} darkColor={darkColor} lightColor={lightColor} />
+            <Circle animated={true} xpos={70} ypos={50} darkMode={darkMode} darkColor={darkColor} lightColor={lightColor} />
+            <ProfileImg />
             
             <Disk darkMode={darkMode} darkColor={darkColor} lightColor={lightColor} />
         </motion.div>

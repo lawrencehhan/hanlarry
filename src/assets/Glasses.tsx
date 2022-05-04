@@ -7,19 +7,23 @@ interface Icon {
 export default function Glasses(props:Icon) {
   const {animated, darkMode} = props;
   const strokeTransition = {
-    duration: 6,
-    ease: [0.6, 0.01, -0.05, 0.95]
+    duration: 4,
+    // ease: [0.6, 0.01, -0.05, 0.95]
+    ease: [0.55, 0, 1, 0.45]
   };
   const glassesVariant = {
-    hidden: { x: "-60%", scale: 1, },
+    hidden: { x: "0vw", y: "0vh", scale: 1, opacity: 1, },
     visible: {
-        x: -500,
-        opacity: 1,
+        x: ["0vw", "-21vw", "-21vw", "-21vw"],
+        y: ["0vh", "-5.8vh", "-5.8vh", "-5.8vh"],
+        scale: [1, 1, 0.35, 0.35],
+        opacity: [1, 1, 1, 0],
         transition: {
             when: "afterChildren",
-            delay: 2,
-            type: "spring",
-            duration: 2
+            ease: [0.76, 0, 0.24, 1],
+            times: [0, 0.5, 0.75, 1],
+            duration: 6,
+            delay: 2.5,
         } 
     }
   }
