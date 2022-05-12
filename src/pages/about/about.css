@@ -1,3 +1,106 @@
+.about {
+  margin-top: 4vh;
+  border: 1px solid black;
+  position: relative;
+  height: 86vh;
+  width: 88%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.about .about-col {
+  height: 90%;
+}
+.about .about-blurb {
+  border: 1px solid white;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.about .about-blurb .blurb-title {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 70%;
+  padding: 2.5%;
+  font-size: 1.25rem;
+  border: 1px solid black;
+}
+.about .about-blurb .blurb-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  padding: 2.5%;
+  margin-top: 7.5%;
+  font-size: 1rem;
+  border: 1px solid black;
+}
+.about .about-blurb .dark {
+  border: 1px solid white;
+}
+.about .about-detail {
+  border: 1px solid white;
+  position: relative;
+  align-self: end;
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 50%;
+}
+.about .about-detail .detail-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -40%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 330px;
+  height: 330px;
+  border: 1px solid white;
+}
+.about .about-detail .detail-title .title-blob {
+  position: absolute;
+  z-index: 55;
+  width: 100%;
+}
+.about .about-detail .detail-title .title-text {
+  z-index: 56;
+  font-size: 2rem;
+  text-align: center;
+}
+.about .about-detail .detail-title .dark {
+  color: black;
+}
+.about .about-detail .detail-techs {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+@media only screen and (min-width: 0rem) and (max-width: 42rem) {
+  .home-container .home-col {
+    width: 100%;
+    height: 50vh;
+  }
+  .home-container .home-col .profile-img {
+    width: 50%;
+  }
+  .home-container .home-col .svg-disk {
+    position: absolute;
+    bottom: 0;
+  }
+}
 
 /*# sourceMappingURL=about.css.map */

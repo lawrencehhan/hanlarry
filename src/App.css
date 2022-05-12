@@ -10,14 +10,14 @@ body {
 }
 body #root {
   width: 100vw;
-  height: 100vh;
   position: relative;
 }
-body #root .bg {
-  height: 100%;
+body #root .main {
+  background-color: #FCF7FF;
   width: 100%;
-  background-color: black;
-  position: absolute;
+}
+body #root .darkMain {
+  background-color: #2A2B2A;
 }
 
 .navbar {
@@ -84,8 +84,11 @@ body #root .bg {
   flex-wrap: wrap;
   padding-top: 7vh;
   justify-content: center;
-  background-color: #FCF7FF;
+  background-color: #2a2b2a00;
   font-family: "Bebas Neue", "Plus Jakarta Sans", "Vazirmatn", sans-serif;
+}
+.app .dark {
+  background-color: #2a2b2a00;
 }
 .app .page {
   border: 1px solid black;
@@ -96,16 +99,16 @@ body #root .bg {
   align-items: center;
   justify-content: center;
 }
+.app .page.dark {
+  border: 1px solid white;
+}
 
 .dark {
-  background-color: #2A2B2A;
-  background-color: #2a2b2a00;
   color: #FCF7FF;
 }
 
 .navbar.dark {
   border-bottom: solid 1px #FCF7FF;
-  background-color: rgba(201, 51, 51, 0.5);
 }
 .navbar.dark a::after {
   background-color: #FCF7FF;

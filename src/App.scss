@@ -14,14 +14,15 @@ body {
   overflow-x: hidden;
   #root {
     width: 100vw;
-    height: 100vh;
+    // height: 100vh;
     position: relative;
-    .bg {
-      height: 100%;
+    .main {
+      background-color: $light-bg-color;
       width: 100%;
-      background-color: black;
-      position: absolute;
-      // z-index: 500;
+
+    }
+    .darkMain {
+      background-color: $dark-bg-color;
     }
   }
 }
@@ -83,6 +84,7 @@ body {
     }
   }
 }
+
 .app {
   position: relative;
   // height: 100%;
@@ -92,26 +94,30 @@ body {
   padding-top: 7vh;
   // align-items: center;
   justify-content: center;
-  background-color: $light-bg-color;
+  background-color: $transparent-bg;
   font-family: 'Bebas Neue', 'Plus Jakarta Sans', 'Vazirmatn', sans-serif;
+  .dark {
+    background-color: $transparent-bg;
+  }
   .page {
     border: 1px solid black;
     position: relative;
-    height: 86vh;// change back to 100% later
-    width: 88%; // change back to 100% later
+    height: 86vh;
+    width: 88%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  .page.dark { 
+    border: 1px solid white;
+  }
 }
+
 .dark {
-  background-color: $dark-bg-color;
-  background-color: $transparent-bg;
   color: $dark-text-color;
 }
 .navbar.dark {
   border-bottom: solid 1px $light-bg-color;
-  background-color: rgba(201, 51, 51, 0.5);
   a::after {
     background-color: $light-bg-color;
   }

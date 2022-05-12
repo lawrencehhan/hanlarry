@@ -1,9 +1,10 @@
 import React from "react";
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import './home.css';
 import Glasses from '../../assets/Glasses';
 import HomeProfile from './HomeProfile';
 import HomeText from './HomeText';
+import BackgroundCanvas from '../../components/background/BackgroundCanvas';
 
 interface Home {
     darkMode: boolean;
@@ -16,12 +17,15 @@ export default function Home(props:Home) {
 
 
     return (
-        <div className={`home-container ${darkMode && "dark"}`} ref={homeRef}>
+        <div className={`home-container page ${darkMode && "dark"}`} ref={homeRef}>
             <motion.div className="glasses-container">
                 <Glasses animated={true} darkMode={props.darkMode}/>
             </motion.div>
             <HomeProfile darkMode={darkMode} darkColor={darkColor} lightColor={lightColor}/>
             <HomeText darkMode={darkMode} darkColor={darkColor} lightColor={lightColor} />
+            <AnimatePresence>
+                <BackgroundCanvas darkMode={darkMode} />
+            </AnimatePresence>
         </div> 
     )
 };

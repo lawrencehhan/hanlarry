@@ -9,7 +9,7 @@ interface Projects {
 export default function Projects(props:Projects) {
     const {darkMode, projectRef} = props;
     return (
-        <div className="projects page" ref={projectRef}>
+        <div className={`projects page ${darkMode && "dark"}`} ref={projectRef}>
             Projects Page
         </div>
     )

@@ -9,7 +9,7 @@ interface Contact {
 export default function Contact(props:Contact) {
     const {darkMode, contactRef} = props;
     return (
-        <div className="contact page" ref={contactRef}>
+        <div className={`contact page ${darkMode && "dark"}`} ref={contactRef}>
             Contact Page
         </div>
     )

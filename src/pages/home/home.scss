@@ -72,7 +72,6 @@
       margin-left: 15%;
     }
   }
-
   .home-profile {
     height: 70%;
     .svg-circle {
@@ -87,16 +86,16 @@
       bottom: 0;
     }
   }
+
+  .bg {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 40%;
+    z-index: 95;
+  }
 }
 
-
-// Dark Mode Settings
-.home-container.dark {
-  border: solid 1.2px white;
-}
-// .home-col.dark {
-//   border: solid 0.8px white;
-// }
 
 // 43rem, 62rem, 
 @media only screen and (min-width: 0rem) and (max-width: 42rem) {

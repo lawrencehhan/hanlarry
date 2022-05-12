@@ -1,8 +1,9 @@
 import React, {useState, useRef } from 'react';
 import './App.css';
+import BackgroundLightMask from './assets/background-mask-light.png'
+import BackgroundDarkMask from './assets/background-mask-dark-blue.png'
 import useOnScreen from './hooks/useOnScreen';
 import { motion, AnimatePresence } from 'framer-motion';
-import BackgroundCanvas from './components/background/BackgroundCanvas';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Projects from './pages/projects/Projects';
@@ -68,9 +69,8 @@ export default function App() {
   }
 
   return (
-    <>
-      <BackgroundCanvas />
-      {/* <ul className={`navbar ${darkMode && "dark"}`}>
+    <div className={`main ${darkMode && "darkMain"}`} style={{backgroundImage: `url(${darkMode ? BackgroundDarkMask : BackgroundLightMask})`, backgroundSize:'cover'}}>
+      <ul className={`navbar ${darkMode && "dark"}`}>
           <AnimatePresence>
             {!homeIsOnScreen && homeLI()}          
           </AnimatePresence>  
@@ -84,13 +84,13 @@ export default function App() {
               <a className="nav-item">contact</a>
           </li>
       </ul>
-      <div className={`app ${darkMode ? "dark" : "" }`}>
+      <div className={`app`}>
         <Home darkMode={darkMode} homeRef={homeRef} />
         <About darkMode={darkMode} aboutRef={aboutRef} />
         <Projects darkMode={darkMode} projectRef={projectRef} />
         <Contact darkMode={darkMode} contactRef={contactRef} />
       </div>
-      <DarkToggle darkMode={darkMode} handleDarkToggle={handleDarkToggle}/>  */}
-    </>
+      <DarkToggle darkMode={darkMode} handleDarkToggle={handleDarkToggle}/> 
+    </div>
   );
 };
