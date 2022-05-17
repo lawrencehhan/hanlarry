@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import TitleBlob from './TitleBlob';
+import DetailBlob from './DetailBlob';
+import TechIcons from './TechIcons';
+import techData from '../../assets/techs/techData';
 import './about.css';
 
 interface About {
@@ -9,6 +12,7 @@ interface About {
     aboutRef?: React.MutableRefObject<HTMLDivElement | null>;
 }
 
+// Left Column About-Blurb
 const AboutBlurb = (props:About) => {
     const { darkMode } = props;
     const controls = useAnimation();
@@ -18,9 +22,6 @@ const AboutBlurb = (props:About) => {
         if (inView) {
             controls.start("visible")
         }
-        // if (!inView) {
-        //     controls.start("hidden")
-        // }
     }, [controls, inView])
 
     const blurbTitle = {
@@ -72,10 +73,23 @@ const AboutBlurb = (props:About) => {
         </div>
     )
 }
+
+// Right Column About-Tech summary
 const AboutDetail = (props:About) => {
     const { darkMode } = props;
     const controls = useAnimation();
     const { ref, inView } = useInView();
+
+    const techs = techData.map(tech => {
+        return (
+            <TechIcons
+                name={tech.name}
+                icon={tech.icon}
+                iconDarkMode={tech.iconDarkMode}
+                darkMode={darkMode}
+            />
+        )
+    })
 
     useEffect(() => {
         if (inView) {
@@ -94,6 +108,18 @@ const AboutDetail = (props:About) => {
             }
         }
     }
+    const iconVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 2,
+                duration: 2,
+                ease: 'easeOut'
+            }
+        }
+    }
 
     return (
         <div className='about-detail about-col'>
@@ -107,11 +133,13 @@ const AboutDetail = (props:About) => {
                     technologies I've worked with
                 </motion.p>
             </motion.div>
-            <motion.div className='detail-techs'>
-                {/* TechBlob */}
-                {/* TechContainer of Icons mapped */}
-                yoyoyo
+            <motion.div className='detail-techs'
+            initial="hidden"
+            animate={controls}
+            variants={iconVariants}>
+                {techs}
             </motion.div>
+            <DetailBlob darkMode={darkMode} />
         </div>
     )
 }

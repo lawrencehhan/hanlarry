@@ -19,7 +19,9 @@ body {
     .main {
       background-color: $light-bg-color;
       width: 100%;
-
+      .wave {
+        position: absolute;
+      }
     }
     .darkMain {
       background-color: $dark-bg-color;
@@ -102,10 +104,9 @@ body {
   .page {
     border: 1px solid black;
     position: relative;
-    height: 86vh;
     width: 88%;
     display: flex;
-    align-items: center;
+
     justify-content: center;
   }
   .page.dark { 

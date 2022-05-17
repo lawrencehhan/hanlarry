@@ -16,6 +16,9 @@ body #root .main {
   background-color: #FCF7FF;
   width: 100%;
 }
+body #root .main .wave {
+  position: absolute;
+}
 body #root .darkMain {
   background-color: #2A2B2A;
 }
@@ -93,10 +96,8 @@ body #root .darkMain {
 .app .page {
   border: 1px solid black;
   position: relative;
-  height: 86vh;
   width: 88%;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 .app .page.dark {

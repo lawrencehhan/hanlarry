@@ -1,8 +1,7 @@
 .about {
-  margin-top: 4vh;
-  border: 1px solid black;
+  margin-top: 8vh;
   position: relative;
-  height: 86vh;
+  height: 98vh;
   width: 88%;
   display: flex;
   align-items: center;
@@ -13,11 +12,11 @@
   height: 90%;
 }
 .about .about-blurb {
-  border: 1px solid white;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 40%;
+  align-self: start;
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -46,27 +45,22 @@
   border: 1px solid white;
 }
 .about .about-detail {
-  border: 1px solid white;
   position: relative;
   align-self: end;
+  align-content: center;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   width: 60%;
-  height: 50%;
+  height: 80%;
 }
 .about .about-detail .detail-title {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -40%;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 330px;
   height: 330px;
-  border: 1px solid white;
 }
 .about .about-detail .detail-title .title-blob {
   position: absolute;
@@ -83,10 +77,15 @@
 }
 .about .about-detail .detail-techs {
   position: relative;
-  width: 100%;
+  max-width: 695px;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
   justify-content: center;
+}
+.about .about-detail .detail-blob {
+  position: absolute;
+  bottom: 0;
 }
 
 @media only screen and (min-width: 0rem) and (max-width: 42rem) {

@@ -4,6 +4,7 @@ import BackgroundLightMask from './assets/background-mask-light.png'
 import BackgroundDarkMask from './assets/background-mask-dark-blue.png'
 import useOnScreen from './hooks/useOnScreen';
 import { motion, AnimatePresence } from 'framer-motion';
+import Wave from './assets/Wave';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Projects from './pages/projects/Projects';
@@ -70,6 +71,7 @@ export default function App() {
 
   return (
     <div className={`main ${darkMode && "darkMain"}`} style={{backgroundImage: `url(${darkMode ? BackgroundDarkMask : BackgroundLightMask})`, backgroundSize:'cover'}}>
+      {/* <Wave /> */}
       <ul className={`navbar ${darkMode && "dark"}`}>
           <AnimatePresence>
             {!homeIsOnScreen && homeLI()}          
