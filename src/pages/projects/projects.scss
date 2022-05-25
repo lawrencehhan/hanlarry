@@ -1,0 +1,131 @@
+.projects {
+    height: 250vh;
+    margin-top: 16vh;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    
+    // Main Title
+    .projects-main-title {
+        font-size: 1.25rem;
+        align-self: flex-start;
+        position: block;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 2.5%;
+        border: 1px solid black;
+        .title-highlight::before {
+            content: "";
+            position: absolute;
+            height: 1.25rem;
+            width: 4.5rem;
+            margin-top: 0.875rem;
+            background-color: rgba(0,0,0,0.15);
+            border-radius: 0.75rem;
+            z-index: 0;
+        }
+        .first::before{
+            width: 6.25rem;
+        }
+        .dark::before {
+            content: "";
+            position: absolute;
+            height: 1.25rem;
+            width: 4.5rem;
+            margin-top: 0.875rem;
+            background-color: rgba(250,250,250,0.15);
+            border-radius: 0.75rem;
+            z-index: 0;
+        }
+        .dark.first::before{
+            width: 6.25rem;
+        }
+    }
+    .projects-main-title.dark{
+        border: 1px solid white;
+    }
+    // Project Cards
+    .project-card {
+        width: 70%;
+        height: 450px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        // border: 1px solid white;
+        // Card Image Section
+        .card-image-wrap {
+            // border: 1px solid white;
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 46%;
+            height: 100%;
+            .card-image {
+                position: absolute;
+                width: 100%;
+            }
+            .blob {
+                height: 100%;
+                width: auto;
+            }
+            .odd-blob {
+                right: 0;
+                margin-right: -15%;
+            }
+            .even-blob {
+                left: 0;
+                margin-left: -15%;
+            }
+            .card-link {
+                height: auto;
+                width: 60%;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                .example {
+                    width: 100%;
+                }
+            }
+        }
+        // Card Text Section
+        .card-text {
+            position: relative;
+            width: 54%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            .card-text-title {
+                font-size: 1.25rem;
+                padding: 2.5%;
+                width: 100%;
+                text-decoration: none;
+                // color: inherit;
+                color: #39A450;
+
+            }
+            .card-text-title.dark {
+                color: #4390F9;
+
+            }
+            .card-text-text {
+                font-size: 1rem;
+                padding: 2.5%;
+            }
+            .card-text-tech {
+                font-size: 0.875rem;
+                padding: 1.25% 2.5% 1.25% 2.5%;
+                opacity: 0.5;
+                width: 100%;
+            }
+            .odd-card {
+                text-align: end;
+            }
+        }
+    }
+}

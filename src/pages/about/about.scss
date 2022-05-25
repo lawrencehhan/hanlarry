@@ -1,0 +1,124 @@
+.about {
+    margin-top: 8vh;
+    position: relative;
+    height: 98vh;
+    width: 88%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    // border: 1px solid black;
+    .about-col {
+        height: 90%;
+    }
+    //font-family: 'Bebas Neue', 'Plus Jakarta Sans', 'Vazirmatn', sans-serif;
+    .about-blurb {
+        // border: 1px solid white;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 40%;
+        align-self: start;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        // border: solid 0.8px black;
+        .blurb-title {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            width: 70%;
+            padding: 2.5%;
+            font-size: 1.25rem;
+            border: 1px solid black;
+        }
+        .blurb-text {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            justify-content: center;
+            width: 70%;
+            padding: 2.5%;
+            margin-top: 7.5%;
+            font-size: 1rem;
+            border: 1px solid black;
+        }
+        .dark {
+            border: 1px solid white;
+        }
+    }
+    .about-detail {
+        // border: 1px solid white;
+        position: relative;
+        align-self: end;
+        align-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 60%;
+        height: 80%;
+        .detail-title {
+            // position: absolute;
+            // left: 0;
+            // right: 0;
+            // top: -65%;
+            // margin-left: auto;
+            // margin-right: auto;
+            position: relative;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            width: 330px;
+            height: 330px;
+            // border: 1px solid white;
+            .title-blob {
+                position: absolute;
+                z-index: 55;
+                width: 100%;
+            }
+            .title-text {
+                z-index: 56;
+                font-size: 2rem; 
+                text-align: center;
+            }
+            .dark {
+                color: black;
+            }
+        }
+        .detail-techs {
+            position: relative;
+            max-width: 695px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+        }
+        .detail-blob {
+            position: absolute; 
+            bottom: 0;
+        }
+    }
+
+  }
+  
+  
+  // 43rem, 62rem, 
+  @media only screen and (min-width: 0rem) and (max-width: 42rem) {
+    .home-container {
+      .home-col {
+        width: 100%;
+        height: 50vh;
+        .svg-circle {
+          
+        }
+        .profile-img {
+          width: 50%;
+        }
+        .svg-disk {
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+  }
+  

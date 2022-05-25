@@ -1,0 +1,15 @@
+.contact {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+        height: 100%;
+        .contact-icon {
+            height: 100%;
+            width: auto;
+        }
+        padding: 8px;
+        z-index: 105;
+    }
+}
