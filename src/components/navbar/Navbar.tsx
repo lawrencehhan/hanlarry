@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Burger from './Burger';
+import NavbarMobile from './NavbarMobile';
 interface Navbar {
     darkMode: boolean;
     isFirstBoot: boolean;
@@ -70,7 +71,7 @@ export default function Navbar(props:Navbar) {
             opacity: 0,
             transition: {
               ease: "easeInOut",
-              duration: 1,
+              duration: 0.5,
             }
           }
         }
@@ -98,7 +99,7 @@ export default function Navbar(props:Navbar) {
             >
                 <AnimatePresence>
                     {/* Home Button */}
-                    {!homeIsOnScreen && homeLI()}        
+                    {!homeIsOnScreen && !isMobile && homeLI()}        
                     {!isMobile && 
                         <motion.li onClick={() => handleScroll(aboutRef)} initial="hidden" animate="visible" exit="hide" variants={liVariants} key="nav-about">
                             <a className="nav-item">about</a>
@@ -128,6 +129,16 @@ export default function Navbar(props:Navbar) {
                             aboutRef={aboutRef}
                             projectRef={projectRef}
                             contactRef={contactRef}/>}
+                    {isMobile && isOpen &&
+                        <NavbarMobile 
+                            darkMode={darkMode}
+                            handleOpen={handleOpen}
+                            handleScroll={handleScroll} 
+                            homeRef={homeRef}
+                            aboutRef={aboutRef}
+                            projectRef={projectRef}
+                            contactRef={contactRef}/>
+                    }
                 </AnimatePresence>  
             </motion.ul>
     )

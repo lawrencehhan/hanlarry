@@ -6,7 +6,7 @@
   bottom: 20px;
   left: 20px;
   opacity: 0.7;
-  z-index: 96;
+  z-index: 1100;
 }
 .button-row .toggle-button {
   height: 0;

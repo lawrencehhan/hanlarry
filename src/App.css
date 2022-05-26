@@ -32,7 +32,7 @@ body #root .darkMain {
   overflow: hidden;
   position: fixed;
   position: -webkit-fixed;
-  z-index: 101;
+  z-index: 1001;
   margin: 0;
   top: 0;
   width: 100%;
@@ -120,6 +120,51 @@ body #root .darkMain {
     margin-bottom: auto;
     right: 4vw;
     align-self: center;
+    z-index: 1005;
+  }
+
+  .navbar-mobile {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1rem;
+    list-style-type: none;
+    border-bottom: 1px solid black;
+    overflow: hidden;
+    position: fixed;
+    position: -webkit-fixed;
+    height: 23vh;
+    margin: 0;
+    top: 0;
+    padding-top: 7vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1004;
+    background-color: #FCF7FFB3;
+  }
+  .navbar-mobile li {
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1010;
+  }
+  .navbar-mobile .background-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1002;
+  }
+  .navbar-mobile .background-svg .background-circle {
+    margin-left: 20%;
+  }
+
+  .navbar-mobile.dark {
+    border-bottom: 1px solid white;
+    background-color: #2A2B2AB3;
   }
 }
 
