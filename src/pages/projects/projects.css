@@ -120,4 +120,74 @@
   text-align: end;
 }
 
+@media only screen and (min-width: 0rem) and (max-width: 42rem) {
+  .projects {
+    height: 350vh;
+    margin-top: 8vh;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+  .projects .projects-main-title {
+    align-self: flex-start;
+    position: block;
+    display: flex;
+    justify-content: center;
+  }
+  .projects .project-card {
+    width: 88%;
+    height: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0vh;
+  }
+  .projects .project-card .card-image-wrap {
+    position: relative;
+    display: flex;
+    align-items: end;
+    width: 100%;
+    height: 50%;
+  }
+  .projects .project-card .card-image-wrap .card-image {
+    position: absolute;
+    width: 100%;
+    height: auto;
+  }
+  .projects .project-card .card-image-wrap .blob {
+    height: 100%;
+    width: auto;
+  }
+  .projects .project-card .card-image-wrap .odd-blob {
+    margin-bottom: -35%;
+    margin-right: 0;
+    rotate: 90deg;
+  }
+  .projects .project-card .card-image-wrap .card-link {
+    height: auto;
+    width: 72%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .projects .project-card .card-image-wrap .card-link .example {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  .projects .project-card .card-text {
+    width: 100%;
+    height: auto;
+    align-content: start;
+  }
+  .projects .project-card .card-text .card-text-tech {
+    font-size: 0.75rem;
+  }
+  .projects .project-card .card-text .odd-card {
+    text-align: start;
+  }
+}
+
 /*# sourceMappingURL=projects.css.map */

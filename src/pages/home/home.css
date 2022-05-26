@@ -79,6 +79,7 @@
 .home-container .home-profile .profile-img {
   position: absolute;
   opacity: 0.75;
+  z-index: 500;
 }
 .home-container .home-profile .svg-disk {
   position: absolute;
@@ -104,12 +105,15 @@
     width: 100%;
     height: 40vh;
   }
+  .home-container .home-col .profile-img {
+    width: 50%;
+  }
   .home-container .home-col .svg-circle {
     opacity: 0.5;
     width: 50%;
   }
   .home-container .home-col .svg-disk {
-    padding-bottom: 10%;
+    padding-bottom: 2%;
     width: 50%;
   }
   .home-container .home-text-col {

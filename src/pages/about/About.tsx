@@ -79,25 +79,11 @@ const AboutDetail = (props:About) => {
     const { darkMode } = props;
     const controls = useAnimation();
     const { ref, inView } = useInView();
-
-    const techs = techData.map(tech => {
-        return (
-            <TechIcons
-                key={tech.id}
-                name={tech.name}
-                icon={tech.icon}
-                iconDarkMode={tech.iconDarkMode}
-                darkMode={darkMode}
-            />
-        )
-    })
-
     useEffect(() => {
         if (inView) {
             controls.start("visible")
         }
     }, [controls, inView])
-
     const textVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -121,6 +107,18 @@ const AboutDetail = (props:About) => {
             }
         }
     }
+    
+    const techs = techData.map(tech => {
+        return (
+            <TechIcons
+                key={tech.id}
+                name={tech.name}
+                icon={tech.icon}
+                iconDarkMode={tech.iconDarkMode}
+                darkMode={darkMode}
+            />
+        )
+    })
 
     return (
         <div className='about-detail about-col'>

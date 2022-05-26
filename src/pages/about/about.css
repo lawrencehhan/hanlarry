@@ -4,6 +4,7 @@
   height: 98vh;
   width: 88%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -20,6 +21,7 @@
   align-items: center;
   align-content: center;
   justify-content: center;
+  z-index: 100;
 }
 .about .about-blurb .blurb-title {
   display: flex;
@@ -58,8 +60,10 @@
   position: relative;
   display: flex;
   align-items: center;
+  align-content: center;
   justify-content: center;
   width: 330px;
+  width: 40%;
   height: 330px;
 }
 .about .about-detail .detail-title .title-blob {
@@ -71,34 +75,88 @@
   z-index: 56;
   font-size: 2rem;
   text-align: center;
+  width: 90%;
 }
 .about .about-detail .detail-title .dark {
   color: black;
 }
 .about .about-detail .detail-techs {
   position: relative;
+  width: 100%;
   max-width: 695px;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
 }
+.about .about-detail .detail-techs .tech-icon {
+  width: 20%;
+  height: auto;
+}
 .about .about-detail .detail-blob {
   position: absolute;
+  height: auto;
+  width: 100%;
   bottom: 0;
 }
 
 @media only screen and (min-width: 0rem) and (max-width: 42rem) {
-  .home-container .home-col {
-    width: 100%;
-    height: 50vh;
+  .about {
+    margin-top: 6vh;
   }
-  .home-container .home-col .profile-img {
-    width: 50%;
+  .about .about-col {
+    width: 100vw;
   }
-  .home-container .home-col .svg-disk {
+  .about .about-blurb {
+    align-content: center;
+    height: 55%;
+  }
+  .about .about-detail {
+    align-self: start;
+    align-content: start;
+    align-items: start;
+    height: 40%;
+  }
+  .about .about-detail .detail-title {
+    height: 50%;
+    width: 60%;
+  }
+  .about .about-detail .detail-title .title-text {
+    font-size: 1.25rem;
+    width: 70%;
+  }
+  .about .about-detail .detail-techs {
     position: absolute;
-    bottom: 0;
+    bottom: 15%;
+    width: 88%;
+  }
+  .about .about-detail .detail-techs .tech-icon {
+    width: 20%;
+    height: auto;
+  }
+  .about .about-detail .detail-blob {
+    bottom: 0%;
+  }
+}
+@media only screen and (min-width: 42rem) and (max-width: 1400px) {
+  .about .about-detail .detail-title {
+    width: 70%;
+  }
+  .about .about-detail .detail-title .title-text {
+    font-size: 1.25rem;
+    width: 70%;
+  }
+  .about .about-detail .detail-techs {
+    position: absolute;
+    bottom: 12%;
+    width: 88%;
+  }
+  .about .about-detail .detail-techs .tech-icon {
+    width: 20%;
+    height: auto;
+  }
+  .about .about-detail .detail-blob {
+    bottom: 0%;
   }
 }
 

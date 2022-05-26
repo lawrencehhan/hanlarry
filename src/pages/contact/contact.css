@@ -1,4 +1,6 @@
 .contact {
+  position: relative;
+  margin-top: 8vh;
   height: 32px;
   display: flex;
   align-items: center;

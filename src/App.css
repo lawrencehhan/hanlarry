@@ -98,8 +98,8 @@ body #root .darkMain {
   position: relative;
   width: 88%;
   display: flex;
-  justify-content: center;
 }
+
 .dark {
   color: #FCF7FF;
 }

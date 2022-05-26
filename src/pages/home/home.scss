@@ -80,6 +80,7 @@
     .profile-img {
       position: absolute;
       opacity: 0.75;
+      z-index: 500;
     }
     .svg-disk {
       position: absolute;
@@ -107,12 +108,15 @@
     .home-col {
       width: 100%;
       height: 40vh;
+      .profile-img {
+        width: 50%;
+      }
       .svg-circle {
         opacity: 0.5;
         width: 50%;
       }
       .svg-disk {
-        padding-bottom: 10%;
+        padding-bottom: 2%;
         width: 50%;
       }
     }
