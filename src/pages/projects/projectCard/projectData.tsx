@@ -4,7 +4,7 @@ export default function ProjectData() {
                 {
                     id: 1,
                     title: "Synestify",
-                    text: "Synestify is a web-app that analyzes an uploaded image and user-preferences to recommend curated songs that reflect the image's visual cues. The analysis matches tone, hue, brightness, user-data, etc. to musical values accepted by Spotify's public API that utilizes Spotify's recommendation engine.",
+                    text: "Synestify is a web-app that analyzes an uploaded image and user-preferences to recommend curated songs that reflect the image's visual cues. The analysis matches tone, hue, brightness, user-data, etc. to musical values accepted by Spotify's public API that utilizes its recommendation engine.",
                     techList: ['Python', 'Flask', 'Pandas', 'Scikit-learn', 'Plotly', 'Spotify API'],
                     image: "synestify_example.png",
                     blob: "blob_01.png",
@@ -39,7 +39,7 @@ export default function ProjectData() {
                 {
                     id: 9,
                     title: 'Placeholder-Title',
-                    text: "Co-authored Instructions For Use (IFU) for human factors study submitted for FDA review - Directed and compiled media for company data rooms used to support the company via venture pitches and product-use demos for collaborative partners (Premiere Pro, After Effects, Illustrator)",
+                    text: "Directed and compiled media for company data rooms used to support the company via venture pitches and product-use demos for collaborative partners. Additionally, Co-authored Instructions For Use (IFU) for human factors study submitted for FDA review.",
                     techList: ['Adobe Premiere Pro', 'Adobe After Effects', 'Adobe Illustrator'],
                     image: "synestify_example.png",
                     blob: 'blob_02.png',

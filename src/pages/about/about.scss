@@ -2,6 +2,7 @@
     margin-top: 8vh;
     position: relative;
     height: 98vh;
+    height: 60rem;
     width: 88%;
     display: flex;
     flex-wrap: wrap;
@@ -13,6 +14,8 @@
         height: 90%;
     }
     //font-family: 'Bebas Neue', 'Plus Jakarta Sans', 'Vazirmatn', sans-serif;
+
+    // Column for Blurb Text
     .about-blurb {
         // border: 1px solid white;
         position: relative;
@@ -49,6 +52,7 @@
             border: 1px solid white;
         }
     }
+    // Column for Detail Technologies
     .about-detail {
         // border: 1px solid white;
         position: relative;
@@ -99,8 +103,8 @@
         }
         .detail-blob {
             position: absolute;
-            height: auto;
-            width: 100%; 
+            // height: auto;
+            // width: 100%; 
             bottom: 0;
         }
     }
@@ -142,6 +146,8 @@
                 }
             }
             .detail-blob {
+                width: 100%;
+                height: auto;
                 bottom: 0%
             }
         } 

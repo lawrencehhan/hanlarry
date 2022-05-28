@@ -2,6 +2,7 @@
   margin-top: 8vh;
   position: relative;
   height: 98vh;
+  height: 60rem;
   width: 88%;
   display: flex;
   flex-wrap: wrap;
@@ -95,8 +96,6 @@
 }
 .about .about-detail .detail-blob {
   position: absolute;
-  height: auto;
-  width: 100%;
   bottom: 0;
 }
 
@@ -135,6 +134,8 @@
     height: auto;
   }
   .about .about-detail .detail-blob {
+    width: 100%;
+    height: auto;
     bottom: 0%;
   }
 }

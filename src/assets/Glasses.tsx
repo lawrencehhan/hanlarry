@@ -8,7 +8,7 @@ interface Icon {
 export default function Glasses(props:Icon) {
   const {animated, isMobile, darkMode} = props;
   const strokeTransition = {
-    duration: 4,
+    duration: 3,
     // ease: [0.6, 0.01, -0.05, 0.95]
     ease: [0.55, 0, 1, 0.45]
   };
@@ -23,8 +23,8 @@ export default function Glasses(props:Icon) {
             when: "afterChildren",
             ease: [0.76, 0, 0.24, 1],
             times: [0, 0.5, 0.75, 1],
-            duration: 5,
-            delay: 2.5,
+            duration: 4,
+            delay: 2,
         } 
     }
   }
@@ -39,8 +39,8 @@ export default function Glasses(props:Icon) {
             when: "afterChildren",
             ease: [0.76, 0, 0.24, 1],
             times: [0, 0.5, 0.75, 1],
-            duration: 5,
-            delay: 2.5,
+            duration: 4,
+            delay: 2,
         } 
     }
   }

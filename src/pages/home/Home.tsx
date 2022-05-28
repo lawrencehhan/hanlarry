@@ -23,9 +23,9 @@ export default function Home(props:Home) {
             </motion.div>
             <HomeProfile darkMode={darkMode} darkColor={darkColor} lightColor={lightColor}/>
             <HomeText darkMode={darkMode} darkColor={darkColor} lightColor={lightColor} />
-            {/* <AnimatePresence>
+            <AnimatePresence>
                 {!isMobile && <BackgroundCanvas darkMode={darkMode} />}
-            </AnimatePresence> */}
+            </AnimatePresence>
         </div> 
     )
 };

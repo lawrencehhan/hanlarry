@@ -22,7 +22,7 @@ export default function BackgroundCanvas(props:bgCanvas) {
             transition: {
                 ease: "easeInOut",
                 duration: 2,
-                delay: 7,
+                delay: 5,
             }
         },
         hide: {
