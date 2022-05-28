@@ -41,7 +41,7 @@ export default function ImgSynestify(props:Img) {
             animate={controls}
             variants={variants}>
                 <img 
-                    src={require(`../projectImages/${darkMode?"synestify_exampleDM.png":"synestify_example.png"}`)}
+                    src={require(`./${darkMode?"synestify_exampleDM.png":"synestify_example.png"}`)}
                     className="example"
                     alt="card-image"
                 />

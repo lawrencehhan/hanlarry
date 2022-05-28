@@ -32,7 +32,7 @@ export default function Glasses(props:Icon) {
     hidden: { x: "0vw", y: "0vh", scale: 1, opacity: 1, },
     visible: {
         x: ["0vw", "2vw", "2vw", "2vw"],
-        y: ["0vh", "-22vh", "-22vh", "-22vh"],
+        y: ["0vh", "-23vh", "-23vh", "-23vh"],
         scale: [1, 1, 0.35, 0.35],
         opacity: [1, 1, 1, 0],
         transition: {

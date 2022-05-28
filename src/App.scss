@@ -40,7 +40,7 @@ body {
   z-index: 1001;
   margin: 0;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 7vh;
   display: inline-flex;
   align-items: center;
@@ -92,7 +92,7 @@ body {
 .app {
   position: relative;
   // height: 100%;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   padding-top: 7vh;
@@ -137,14 +137,13 @@ body {
     font-size: 1rem;
     list-style-type: none;
     border-bottom: 1px solid black;
-    overflow: hidden;
     position: fixed;
     position: -webkit-fixed;
     height: 23vh;
     margin: 0;
     top: 0;
     padding-top: 7vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

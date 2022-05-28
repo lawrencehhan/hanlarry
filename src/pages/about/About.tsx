@@ -40,7 +40,7 @@ const AboutBlurb = (props:About) => {
             y: 0,
             opacity: 1,
             transition: {
-                delay: 1.5,
+                delay: 1,
                 duration: 3,
                 ease: "easeOut"
             }   
@@ -133,9 +133,9 @@ const AboutDetail = (props:About) => {
                 </motion.p>
             </motion.div>
             <motion.div className='detail-techs'
-            initial="hidden"
-            animate={controls}
-            variants={iconVariants}>
+                initial="hidden"
+                animate={controls}
+                variants={iconVariants}>
                 {techs}
             </motion.div>
             <DetailBlob darkMode={darkMode} />

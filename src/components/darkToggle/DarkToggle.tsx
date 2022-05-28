@@ -4,17 +4,18 @@ import './darkToggle.css';
 interface DarkProp {
     darkMode: boolean;
     handleDarkToggle: React.ChangeEventHandler<HTMLInputElement>;
+    isMobile?: boolean;
 }
 
 export default function DarkToggle(props: DarkProp) {
-    const {darkMode, handleDarkToggle} = props
+    const {darkMode, handleDarkToggle, isMobile} = props
     const toggleValue = darkMode ? "darkMode" : "lightMode";
     const variants = {
-        hidden: { opacity: 0, },
+        hidden: !isMobile ? { opacity: 0, } : { opacity: 1 },
         visible: {
             opacity: 1,
             transition: {
-                delay: 5,
+                delay: 3,
                 duration: 1,
                 ease: "easeInOut"
             }
@@ -42,6 +43,11 @@ export default function DarkToggle(props: DarkProp) {
                 >
                     <span className="toggle-switch" />
                 </label>
+                <img 
+                    src={require(`../../assets/${darkMode?"dm_moon.png":"dm_sun.png"}`)}
+                    className="dm-image"
+                    alt="Darkmode Type"
+                />
         </motion.div>
     )
 }

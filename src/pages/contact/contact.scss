@@ -7,11 +7,12 @@
     justify-content: center;
     a {
         height: 100%;
+        padding: 8px;
+        z-index: 1105; // body->navbar->toggle->contacts
         .contact-icon {
             height: 100%;
             width: auto;
+            z-index: 140;
         }
-        padding: 8px;
-        z-index: 105;
     }
 }

@@ -14,10 +14,11 @@ interface Navbar {
     contactRef: React.MutableRefObject<HTMLDivElement | null>;
     isOpen: boolean;
     handleOpen: ()=>void;
+    handleDarkToggle: React.ChangeEventHandler<HTMLInputElement>;
 }
 
 export default function Navbar(props:Navbar) {
-    const {darkMode, isFirstBoot, isMobile, homeIsOnScreen, handleScroll, homeRef, aboutRef, projectRef, contactRef, isOpen, handleOpen} = props;
+    const {darkMode, isFirstBoot, isMobile, homeIsOnScreen, handleScroll, homeRef, aboutRef, projectRef, contactRef, isOpen, handleOpen, handleDarkToggle} = props;
     const navbarVariants = {
         hidden: isFirstBoot ? { opacity: 0, } : {opacity: 1 },
         visible: {
@@ -137,7 +138,8 @@ export default function Navbar(props:Navbar) {
                             homeRef={homeRef}
                             aboutRef={aboutRef}
                             projectRef={projectRef}
-                            contactRef={contactRef}/>
+                            contactRef={contactRef}
+                            handleDarkToggle={handleDarkToggle}/>
                     }
                 </AnimatePresence>  
             </motion.ul>

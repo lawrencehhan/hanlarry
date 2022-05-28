@@ -75,7 +75,8 @@ export default function App() {
         projectRef={projectRef}
         contactRef={contactRef}
         isOpen={isOpen}
-        handleOpen={handleOpen}/>
+        handleOpen={handleOpen}
+        handleDarkToggle={handleDarkToggle}/>
 
       <div className={`app`}>
         <Home darkMode={darkMode} homeRef={homeRef} isMobile={isMobile} />
@@ -83,7 +84,7 @@ export default function App() {
         <Projects darkMode={darkMode} projectRef={projectRef} />
         <Contact darkMode={darkMode} contactRef={contactRef} />
       </div>
-      <DarkToggle darkMode={darkMode} handleDarkToggle={handleDarkToggle}/> 
+      {!isMobile && <DarkToggle darkMode={darkMode} handleDarkToggle={handleDarkToggle}/> }
     </div>
   );
 };

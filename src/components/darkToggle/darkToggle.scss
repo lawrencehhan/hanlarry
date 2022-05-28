@@ -1,4 +1,4 @@
-$toggle-animation-speed: 0.4s;
+$toggle-animation-speed: 0.8s;
 $toggle-height: 32px;
 $toggle-width: 54px;
 $switch-offset: 4px;
@@ -53,5 +53,39 @@ $switch-color: white;
     }
     .toggle-label:active .toggle-switch {
         width: $toggle-width;
+    }
+    // Button State Image
+    .dm-image {
+        height: calc(0.45 * #{$toggle-height});
+        width: auto;
+        margin-left: calc(0.25 * #{$toggle-height});
+        margin-top: calc(0.275 * #{$toggle-height});
+    }
+}
+
+@media only screen and (min-width: 0rem) and (max-width: 42rem) {
+    $toggle-height: 27px;
+    $toggle-width: 45px;
+    .button-row{
+        position: absolute;
+        top: 7px;
+        left: 14px;
+        .toggle-label {
+            width: $toggle-width;
+            height: $toggle-height;
+            .toggle-switch {
+                height: calc(0.75 * #{$toggle-height});
+                width: calc(0.75 * #{$toggle-height});
+            }
+        }
+        .toggle-label:active .toggle-switch {
+            width: $toggle-width;
+        }
+        .dm-image {
+            height: calc(0.5 * #{$toggle-height});
+            width: auto;
+            margin-left: calc(0.25 * #{$toggle-height});
+            margin-top: calc(0.25 * #{$toggle-height});
+        }
     }
 }

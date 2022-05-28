@@ -23,7 +23,7 @@
   position: relative;
   cursor: pointer;
   background: #2a2b2a27;
-  transition: background-color 0.4s;
+  transition: background-color 0.8s;
 }
 .button-row .toggle-label .toggle-switch {
   height: calc(0.75 * 32px);
@@ -33,7 +33,7 @@
   border-radius: 36px;
   box-shadow: 0 0 8px 0 rgba(10, 10, 10, 0.45);
   position: absolute;
-  transition: 0.4s;
+  transition: 0.8s;
   background: white;
 }
 .button-row .toggle-button:checked + .toggle-label .toggle-switch {
@@ -45,6 +45,37 @@
 }
 .button-row .toggle-label:active .toggle-switch {
   width: 54px;
+}
+.button-row .dm-image {
+  height: calc(0.45 * 32px);
+  width: auto;
+  margin-left: calc(0.25 * 32px);
+  margin-top: calc(0.275 * 32px);
+}
+
+@media only screen and (min-width: 0rem) and (max-width: 42rem) {
+  .button-row {
+    position: absolute;
+    top: 7px;
+    left: 14px;
+  }
+  .button-row .toggle-label {
+    width: 45px;
+    height: 27px;
+  }
+  .button-row .toggle-label .toggle-switch {
+    height: calc(0.75 * 27px);
+    width: calc(0.75 * 27px);
+  }
+  .button-row .toggle-label:active .toggle-switch {
+    width: 45px;
+  }
+  .button-row .dm-image {
+    height: calc(0.5 * 27px);
+    width: auto;
+    margin-left: calc(0.25 * 27px);
+    margin-top: calc(0.25 * 27px);
+  }
 }
 
 /*# sourceMappingURL=darkToggle.css.map */

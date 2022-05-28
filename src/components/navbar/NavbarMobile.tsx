@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import DarkToggle from '../darkToggle/DarkToggle';
 interface NavbarMobile {
     darkMode: boolean;
     handleOpen: ()=>void;
@@ -8,10 +9,11 @@ interface NavbarMobile {
     aboutRef: React.MutableRefObject<HTMLDivElement | null>;
     projectRef: React.MutableRefObject<HTMLDivElement | null>;
     contactRef: React.MutableRefObject<HTMLDivElement | null>;
+    handleDarkToggle: React.ChangeEventHandler<HTMLInputElement>;
 }
 
 export default function Navbar(props:NavbarMobile) {
-    const {darkMode, handleOpen, handleScroll, homeRef, aboutRef, projectRef, contactRef} = props;
+    const {darkMode, handleOpen, handleScroll, homeRef, aboutRef, projectRef, contactRef, handleDarkToggle} = props;
     const navbarVariants = {
         hidden: {opacity: 0, y: -20, },
         visible: {
@@ -41,7 +43,7 @@ export default function Navbar(props:NavbarMobile) {
             key="something"
             >  
                 {/* Background Gradient */}
-                <motion.svg className="background-svg">
+                {/* <motion.svg className="background-svg">
                     <motion.circle
                         className="background-circle"
                         cx="160"
@@ -51,7 +53,9 @@ export default function Navbar(props:NavbarMobile) {
                         filter={darkMode ? "blur(70px)" : "blur(40px)"}
                         >    
                     </motion.circle>
-                </motion.svg>
+                </motion.svg> */}
+                {/* DarkMode Toggle */}
+                <DarkToggle darkMode={darkMode} handleDarkToggle={handleDarkToggle} isMobile={true}/>
                 {/* Navbar Items */}
                 <motion.li onClick={() => {
                     handleScroll(homeRef)
