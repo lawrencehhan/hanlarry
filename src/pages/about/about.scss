@@ -63,6 +63,7 @@
         justify-content: center;
         width: 60%;
         height: 80%;
+        z-index: 0;
         .detail-title {
             position: relative;
             display: flex;
@@ -99,6 +100,7 @@
             .tech-icon {
                 width: 20%;
                 height: auto;
+                z-index: 1000;
             }
         }
         .detail-blob {

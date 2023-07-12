@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import TitleBlob from './TitleBlob';
@@ -61,7 +61,7 @@ const AboutBlurb = (props:About) => {
             animate={controls}
             variants={blurbText}>
                 <p>
-                    I’m an engineer based in San Francisco, CA - specializing in data anlaysis and regenerative-biomaterial therapeutics. I graduated from the University of Virginia with a BS In biomedical-engineering, and a minor in computer science. 
+                    I’m an engineer based in San Francisco, CA - specializing in data anlaysis and regenerative-biomaterial therapeutics. I graduated from the University of Virginia with a BS in Biomedical-Engineering, and a minor in Computer Science. 
                 </p>
                 <p>
                     <br></br>somethingsomething on learning to code because of lab web/photography, then because of realizing how i could speed up data insights by using code at tempo, 

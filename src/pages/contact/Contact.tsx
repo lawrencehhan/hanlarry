@@ -35,6 +35,12 @@ export default function Contact(props:Contact) {
         <div className={`contact page ${darkMode && "dark"}`}
         ref={contactRef}
         >
+            <motion.div className={"contact-title"}
+                initial="hidden"
+                animate={controls}
+                variants={variants}>
+                    Feel free to contact me at Lhh128@gmail.com !
+            </motion.div>
             <a href="https://github.com/lawrencehhan" className="icon-wrapper" target="_blank" ref={ref}>
                 <motion.img 
                     src={require(`../../assets/contact/${darkMode ? "githubDM.png" : "github.png"}`)} 

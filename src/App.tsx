@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef } from 'react';
 import './App.css';
+import GrainFilter from './assets/GrainFilter';
 import BackgroundLightMask from './assets/background-mask-light.png'
 import BackgroundDarkMask from './assets/background-mask-dark-03.png'
 import useOnScreen from './hooks/useOnScreen';
@@ -53,6 +54,7 @@ export default function App() {
       inline: "nearest"
      })
   }
+
   // Conditional rendering for homeRef
   const homeIsOnScreen = useOnScreen(homeRef);
   // Check to see if Burger navbar is open
@@ -61,9 +63,30 @@ export default function App() {
     setIsOpen(prevIsOpen => !prevIsOpen)
   }
   console.log(isMobile)
-  return (
-    <div className={`main ${darkMode && "darkMain"}`} style={{backgroundImage: `url(${darkMode ? BackgroundDarkMask : BackgroundLightMask})`, backgroundSize:'cover'}}>
 
+  // Framer-Motion variants for loading background gradient canvas
+  const loadingVariants = {
+    hidden: { opacity: 0, },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        duration: 1,
+        ease: "easeInOut"
+      }
+    }
+  }
+
+  return (
+    <motion.div 
+      className={`main ${darkMode && "darkMain"}`} 
+      // Background png is temporarily disabled until a faster means is available
+      // style={{backgroundImage: `url(${darkMode ? BackgroundDarkMask : BackgroundLightMask})`, backgroundSize:'cover'}}
+      initial="hidden"
+      animate="visible"
+      variants={loadingVariants}
+      >
+      <GrainFilter />
       <Navbar 
         darkMode={darkMode}
         isFirstBoot={isFirstBoot}
@@ -85,6 +108,6 @@ export default function App() {
         <Contact darkMode={darkMode} contactRef={contactRef} />
       </div>
       {!isMobile && <DarkToggle darkMode={darkMode} handleDarkToggle={handleDarkToggle}/> }
-    </div>
+    </motion.div>
   );
 };

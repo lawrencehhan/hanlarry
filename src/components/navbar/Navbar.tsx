@@ -20,9 +20,9 @@ interface Navbar {
 export default function Navbar(props:Navbar) {
     const {darkMode, isFirstBoot, isMobile, homeIsOnScreen, handleScroll, homeRef, aboutRef, projectRef, contactRef, isOpen, handleOpen, handleDarkToggle} = props;
     const navbarVariants = {
-        hidden: isFirstBoot ? { opacity: 0, } : {opacity: 1 },
+        hidden: isFirstBoot ? { opacity: 0, } : {opacity: 0.42 },
         visible: {
-            opacity: 1,
+            opacity: 0.64,
             transition: {
                 delay: isFirstBoot ? 5 : 0,
                 duration: 1,

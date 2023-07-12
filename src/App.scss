@@ -11,6 +11,7 @@ $transparent-bg: #2a2b2a00;
 body {
   margin: 0;
   width: 100vw;
+  background-color: $dark-bg-color;
   overflow-x: hidden;
   #root {
     width: 100vw;
@@ -32,7 +33,8 @@ body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1rem;
   list-style-type: none;
-  background-color: rgba(0,0,0,0);
+  // background-color: rgba(0,0,0,0);
+  background-color: $light-bg-color;
   border-bottom: solid 1px $dark-bg-color;
   overflow: hidden;
   position: fixed;
@@ -88,7 +90,6 @@ body {
   }
 }
 
-
 .app {
   position: relative;
   // height: 100%;
@@ -116,9 +117,31 @@ body {
 }
 .navbar.dark {
   border-bottom: solid 1px $light-bg-color;
+  background-color: $dark-bg-color;
   a::after {
     background-color: $light-bg-color;
   }
+}
+
+.grain {
+  display: none;
+}
+.main::before,
+.main::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.4;
+}
+.main::before {
+  background: #06A77D;
+  background: #192A51;
+  // when dark: #192A51;
+  filter: url(#grainFilter);
 }
 
 @media only screen and (min-width: 0rem) and (max-width: 42rem) {

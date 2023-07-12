@@ -387,6 +387,60 @@ export default function BackgroundCanvas(props:bgCanvas) {
           </mesh>
         )
     }
+
+    function Circle(props: JSX.IntrinsicElements['mesh']) {
+        const mesh = useRef<THREE.Mesh>(null!)
+        let ogGeo = useRef<THREE.BufferGeometry>(null!)
+
+        // Saving original position as a reference
+        useEffect(() => {
+            const { geometry } = mesh.current
+            ogGeo.current = geometry  
+        }, [])
+
+
+        // Rotating animation
+        useFrame(() => {
+            mesh.current.rotation.x += 0.005
+            mesh.current.rotation.y -= 0.005
+        })
+
+        // Perlin noise animation
+        useFrame(({ clock }) => {
+            const time = clock.getElapsedTime() // For incrementing perlin noise calc
+            const { geometry } = mesh.current
+            const { position } = geometry.attributes // to access vertices of geometry
+
+            let vertex = new THREE.Vector3() // placeholder for new vertex vals
+            for (let i=0; i < ogGeo.current.attributes.position.count; i++) {
+                vertex.fromBufferAttribute(ogGeo.current.attributes.position, i) // copying original geometry
+                let perlin = noise.simplex3(
+                    (vertex.x * 0.9) + (time * 1), // vertex coeffs __
+                    (vertex.y * 0.9)+ (time * 1), // time component will affect incrementing steps and spike variance
+                    (vertex.z * 0.9)+ (time * 1))
+                let ratio = 1 + (perlin * 0.00005) // perlin ceoff affects range of change from baseline 1
+                vertex.multiplyScalar(ratio)
+                position.setXYZ(i, vertex.x, vertex.y, vertex.z)
+                position.needsUpdate = true
+            }
+            geometry.computeVertexNormals();
+        })
+        return (
+          <mesh
+            {...props}
+            ref={mesh}
+            castShadow
+            receiveShadow={false}>
+            <sphereBufferGeometry args={[ 1.4, 128, 128 ]} /> {/* radius, widthSeg, heightSeg */}
+            <meshStandardMaterial 
+                color={0xB5D5FE}
+                roughness={0.6} 
+                metalness={0.2} 
+                wireframe={false}
+                side={FrontSide} />
+          </mesh>
+        )
+    }
     
     return (
         <motion.div className='bg' id='canvas-container'

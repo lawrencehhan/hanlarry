@@ -73,7 +73,7 @@ export default function ProjectCard(props:Card) {
         variants={variants}>
             <a href={link} target="_blank" className={`card-text-title ${odd && "odd-card"} ${darkMode && "dark"}`}>{title}</a>
             <p className={`card-text-text`}>{text}</p>
-            <p className={`card-text-tech ${odd && "odd-card"}`}>{usedTech}</p>
+            <p className={`card-text-tech ${odd && "odd-card"} ${darkMode && "dark"}`}>{usedTech}</p>
         </motion.div>
     )
 

@@ -1,5 +1,6 @@
 .projects {
   height: 250vh;
+  height: 2700px;
   margin-top: 16vh;
   position: relative;
   display: flex;
@@ -60,6 +61,7 @@
   align-items: center;
   width: 46%;
   height: 100%;
+  z-index: 1;
 }
 .projects .project-card .card-image-wrap .card-image {
   position: absolute;
@@ -68,6 +70,7 @@
 .projects .project-card .card-image-wrap .blob {
   height: 100%;
   width: auto;
+  filter: blur(8px);
 }
 .projects .project-card .card-image-wrap .odd-blob {
   right: 0;
@@ -113,8 +116,11 @@
 .projects .project-card .card-text .card-text-tech {
   font-size: 0.875rem;
   padding: 1.25% 2.5% 1.25% 2.5%;
-  opacity: 0.5;
+  opacity: 0.7;
   width: 100%;
+}
+.projects .project-card .card-text .card-text-tech.dark {
+  opacity: 0.5;
 }
 .projects .project-card .card-text .odd-card {
   text-align: end;

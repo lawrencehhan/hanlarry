@@ -43,7 +43,7 @@ export default function Projects(props:Projects) {
             opacity: 1,
             x: 0,
             transition: {
-                duration: 2,
+                duration: 1.5,
                 ease: "easeInOut",
             }
         }
@@ -78,7 +78,7 @@ export default function Projects(props:Projects) {
             <motion.div className="project-card">
                 <div className="card-image-wrap">
                     <motion.img 
-                        src={require(`./projectCard/projectBlobs/blob_01.png`)}
+                        src={require(`./projectCard/projectBlobs/${darkMode?'blob_01_dm.png':'blob_01.png'}`)}
                         className={`card-image blob odd-blob`}
                         alt="blob"
                         ref={blobRefOne}
@@ -93,7 +93,7 @@ export default function Projects(props:Projects) {
             <motion.div className="project-card">
                 <div className="card-image-wrap">
                     <motion.img 
-                        src={require(`./projectCard/projectBlobs/blob_01.png`)}
+                        src={require(`./projectCard/projectBlobs/${darkMode?'blob_02_dm.png':'blob_02.png'}`)}
                         className={`card-image blob odd-blob`}
                         alt="blob"
                         ref={blobRefTwo}
@@ -108,7 +108,7 @@ export default function Projects(props:Projects) {
             <motion.div className="project-card">
                 <div className="card-image-wrap">
                     <motion.img 
-                        src={require(`./projectCard/projectBlobs/blob_01.png`)}
+                        src={require(`./projectCard/projectBlobs/${darkMode?'blob_03_dm.png':'blob_03.png'}`)}
                         className={`card-image blob odd-blob`}
                         alt="blob"
                         ref={blobRefThree}
@@ -123,7 +123,7 @@ export default function Projects(props:Projects) {
             <motion.div className="project-card">
                 <div className="card-image-wrap">
                     <motion.img 
-                        src={require(`./projectCard/projectBlobs/blob_01.png`)}
+                        src={require(`./projectCard/projectBlobs/${darkMode?'blob_04_dm.png':'blob_04.png'}`)}
                         className={`card-image blob odd-blob`}
                         alt="blob"
                         ref={blobRefFour}
@@ -138,7 +138,7 @@ export default function Projects(props:Projects) {
             <motion.div className="project-card">
                 <div className="card-image-wrap">
                     <motion.img 
-                        src={require(`./projectCard/projectBlobs/blob_01.png`)}
+                        src={require(`./projectCard/projectBlobs/${darkMode?'blob_05_dm.png':'blob_05.png'}`)}
                         className={`card-image blob odd-blob`}
                         alt="blob"
                         ref={blobRefFive}

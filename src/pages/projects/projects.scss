@@ -1,5 +1,6 @@
 .projects {
     height: 250vh;
+    height: 2700px; // 2490 for 5 cards
     margin-top: 16vh;
     position: relative;
     display: flex;
@@ -55,6 +56,7 @@
         display: flex;
         align-items: center;
         justify-content: end;
+
         // border: 1px solid white;
         // Card Image Section
         .card-image-wrap {
@@ -64,6 +66,7 @@
             align-items: center;
             width: 46%;
             height: 100%;
+            z-index: 1;
             .card-image {
                 position: absolute;
                 width: 100%;
@@ -71,6 +74,7 @@
             .blob {
                 height: 100%;
                 width: auto;
+                filter: blur(8px);
             }
             .odd-blob {
                 right: 0;
@@ -120,8 +124,11 @@
             .card-text-tech {
                 font-size: 0.875rem;
                 padding: 1.25% 2.5% 1.25% 2.5%;
-                opacity: 0.5;
+                opacity: 0.7;
                 width: 100%;
+            }
+            .card-text-tech.dark {
+                opacity: 0.5;
             }
             .odd-card {
                 text-align: end;
