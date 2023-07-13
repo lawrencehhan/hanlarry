@@ -100,7 +100,15 @@
 .about .about-detail .detail-techs .tech-icon {
   width: 20%;
   height: auto;
-  z-index: 1000;
+  z-index: 2;
+  text-align: center;
+}
+.about .about-detail .detail-techs .tech-icon .tech-icon-image {
+  width: 80%;
+}
+.about .about-detail .detail-techs .tech-icon p {
+  margin-top: -12%;
+  font-size: 0.8rem;
 }
 .about .about-detail .detail-blob {
   position: absolute;
@@ -146,6 +154,10 @@
     height: auto;
     bottom: 0%;
   }
+  .about .blurb-bubbleWrap {
+    max-width: 50%;
+    overflow: hidden;
+  }
 }
 @media only screen and (min-width: 42rem) and (max-width: 1400px) {
   .about .about-detail .detail-title {
@@ -166,6 +178,10 @@
   }
   .about .about-detail .detail-blob {
     bottom: 0%;
+  }
+  .about .blurb-bubbleWrap {
+    max-width: 50%;
+    overflow: hidden;
   }
 }
 

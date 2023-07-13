@@ -39,7 +39,7 @@ export default function Contact(props:Contact) {
                 initial="hidden"
                 animate={controls}
                 variants={variants}>
-                    Feel free to contact me at Lhh128@gmail.com !
+                    Email: Lhh128@gmail.com
             </motion.div>
             <a href="https://github.com/lawrencehhan" className="icon-wrapper" target="_blank" ref={ref}>
                 <motion.img 

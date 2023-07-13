@@ -9,7 +9,16 @@ interface techData {
 
 export default function TechIcons(props:techData) {
     const { name, icon, iconDarkMode, darkMode } = props
+    const displayName = name[0].toUpperCase() + name.substring(1);
+
     return (
-        <img src={require(`../../assets/techs/${darkMode ? iconDarkMode : icon}`)} className={`tech-icon ${name}`} title={name} alt={name} />
+        <div className={`tech-icon ${name}`}>
+            <img 
+                src={require(`../../assets/techs/${darkMode ? iconDarkMode : icon}`)}  
+                className={'tech-icon-image'}
+                title={name} 
+                alt={name} />
+            <p className="tech-icon-name">{displayName}</p>
+        </div>
     )
 }

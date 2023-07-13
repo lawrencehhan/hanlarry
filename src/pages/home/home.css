@@ -109,6 +109,9 @@
     height: 80vh;
     overflow: hidden;
   }
+  .home-container .svg-waveLine {
+    display: none;
+  }
   .home-container .home-col {
     width: 100%;
     height: 40vh;

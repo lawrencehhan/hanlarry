@@ -25,7 +25,7 @@
     position: absolute;
     opacity: .5;
     filter: blur(42px);
-    transform: scale(2)
+    transform: scale(2);
   }
   //font-family: 'Bebas Neue', 'Plus Jakarta Sans', 'Vazirmatn', sans-serif;
   .home-col {
@@ -113,6 +113,9 @@
   .home-container {
     height: 80vh;
     overflow: hidden; // for glasses container causing horizontal scroll during animation
+    .svg-waveLine {
+      display: none;
+    }
     .home-col {
       width: 100%;
       height: 40vh;

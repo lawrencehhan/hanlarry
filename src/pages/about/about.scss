@@ -106,7 +106,15 @@
             .tech-icon {
                 width: 20%;
                 height: auto;
-                z-index: 1000;
+                z-index: 2;
+                text-align: center;
+                .tech-icon-image {
+                    width: 80%;
+                }
+                p {
+                    margin-top: -12%;
+                    font-size: .8rem;
+                }
             }
         }
         .detail-blob {
@@ -159,6 +167,10 @@
                 bottom: 0%
             }
         } 
+        .blurb-bubbleWrap {
+            max-width: 50%;
+            overflow: hidden;
+        }
     }
   }
   @media only screen and (min-width: 42rem) and (max-width: 1400px) {
@@ -185,6 +197,10 @@
                 bottom: 0%
             }
         } 
+        .blurb-bubbleWrap {
+            max-width: 50%;
+            overflow: hidden;
+        }
     }
   }
   
