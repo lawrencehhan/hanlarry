@@ -22,6 +22,12 @@
 .home-container .glasses-container .glasses-icon {
   position: absolute;
 }
+.home-container .svg-waveLine {
+  position: absolute;
+  opacity: 0.5;
+  filter: blur(42px);
+  transform: scale(2);
+}
 .home-container .home-col {
   position: relative;
   display: flex;

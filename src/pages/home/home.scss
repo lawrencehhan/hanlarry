@@ -21,6 +21,12 @@
         position: absolute;
     }
   }
+  .svg-waveLine {
+    position: absolute;
+    opacity: .5;
+    filter: blur(42px);
+    transform: scale(2)
+  }
   //font-family: 'Bebas Neue', 'Plus Jakarta Sans', 'Vazirmatn', sans-serif;
   .home-col {
     position: relative;

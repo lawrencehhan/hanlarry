@@ -5,6 +5,7 @@ import Glasses from '../../assets/Glasses';
 import HomeProfile from './HomeProfile';
 import HomeText from './HomeText';
 import BackgroundCanvas from '../../components/background/BackgroundCanvas';
+import WaveLine from '../../assets/WaveLine';
 
 interface Home {
     darkMode: boolean;
@@ -21,6 +22,18 @@ export default function Home(props:Home) {
             <motion.div className="glasses-container">
                 <Glasses animated={true} isMobile={isMobile} darkMode={props.darkMode}/>
             </motion.div>
+            <WaveLine 
+                darkMode={darkMode}
+                mainWave={true}
+                strokeColor={"#4390F9"}
+                lineWidth={420}
+            />
+            <WaveLine 
+                darkMode={darkMode}
+                mainWave={false}
+                strokeColor={"#96E6B3"}
+                lineWidth={300}
+            />
             <HomeProfile darkMode={darkMode} darkColor={darkColor} lightColor={lightColor}/>
             <HomeText darkMode={darkMode} darkColor={darkColor} lightColor={lightColor} />
             <AnimatePresence>

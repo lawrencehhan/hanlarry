@@ -5,52 +5,44 @@ interface Bubble {
     darkMode: boolean;
     darkColor: string;
     lightColor: string;
-    xpos: number;
-    ypos: number;
+    xMovement: number[];
+    yMovement: number[];
 }
 
 export default function Bubble(props:Bubble) {
-    const {darkMode, animated, darkColor, lightColor, xpos, ypos} = props;
-    const strokeColor = darkMode ? lightColor : darkColor;
-    const strokeTransition = {
-        delay: 4,
-        duration: 5,
-        ease: [0.6, 0.01, -0.05, 0.95]
-    };
-    const circleTransition = {
+    const {darkMode, animated, darkColor, lightColor, xMovement, yMovement} = props;
+    const fillColor = darkMode ? lightColor : darkColor;
+    
+    const bubbleTransition = {
         delay: 4,
         repeat: Infinity,
         repeatType: undefined,
-        duration: 8,
+        duration: 24,
         ease: "easeInOut",
     }
-    const circleVariant = {
-        hidden: { x: xpos, y: ypos, },
+    const bubbleVariant = {
+        hidden: { x: xMovement[0], y: yMovement[0], },
         visible: {
-            x: [xpos, xpos*1.2, xpos, xpos*0.8, xpos],
-            y: [ypos, ypos*-1, ypos, ypos*-1, ypos],
-            transition: circleTransition,
+            x: xMovement,
+            y: yMovement,
+            transition: bubbleTransition,
         }
     }
-
     
     return (
-        <motion.svg className="svg-circle" height="300" width="300"
+        <motion.svg className="svg-bubble" height="300" width="300"
             viewBox="0 0 300 300"
             initial="hidden"
             animate="visible"
-            variants={!animated ? undefined : circleVariant}
+            variants={!animated ? undefined : bubbleVariant}
         >
             <motion.circle
                 cx="150" 
                 cy="150" 
                 r="150" 
-                fill="none" 
-                stroke={strokeColor} 
-                stroke-width="1"
+                fill={fillColor} 
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
-                transition={!animated ? undefined : strokeTransition}
                 >
             </motion.circle>
         </motion.svg>

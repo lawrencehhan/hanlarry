@@ -5,6 +5,7 @@ import TitleBlob from './TitleBlob';
 import DetailBlob from './DetailBlob';
 import TechIcons from './TechIcons';
 import techData from '../../assets/techs/techData';
+import Bubble from '../../assets/Bubble';
 import './about.css';
 
 interface About {
@@ -46,6 +47,16 @@ const AboutBlurb = (props:About) => {
             }   
         }
     }
+    const blurbBubbles = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { 
+                duration: 1,
+                ease: "easeInOut"
+            }
+        }
+    }
 
     return (
         <div className='about-blurb about-col'>
@@ -69,6 +80,35 @@ const AboutBlurb = (props:About) => {
                 <p>
                     <br></br>somesomething about while having experience in the lab, passion in building software projects that complenemtn and boost research. 
                 </p>
+            </motion.div>
+            <motion.div className={`blurb-bubbleWrap ${darkMode && "dark"}`}
+            initial="hidden"
+            animate={controls}
+            variants={blurbBubbles}>
+                <Bubble 
+                    animated={true}
+                    xMovement={[-70, -70*1.2, -70, -70*0.08, -70]}
+                    yMovement={[-50, -50*-1, -50, -50*-1, -50]}
+                    darkMode={darkMode} 
+                    darkColor={"#4390F9"} 
+                    lightColor={"#4390F9"} 
+                />
+                <Bubble 
+                    animated={true}
+                    xMovement={[-10, -10*1.2, -10, -10*0.8, -10]}
+                    yMovement={[50, 80*-1, 50, 80*-1, 50]}
+                    darkMode={darkMode} 
+                    darkColor={"#5CEC7E"} 
+                    lightColor={"#5CEC7E"} 
+                />
+                <Bubble 
+                    animated={true}
+                    xMovement={[120, 120*0.8, 120, 120*1.2, 120]}
+                    yMovement={[50, 50*-1, 50, 50*-1, 50]}
+                    darkMode={darkMode} 
+                    darkColor={"#EB9367"} 
+                    lightColor={"#EB9367"} 
+                />
             </motion.div>
         </div>
     )

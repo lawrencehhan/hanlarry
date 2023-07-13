@@ -44,6 +44,12 @@
   font-size: 1rem;
   border: 1px solid black;
 }
+.about .about-blurb .blurb-bubbleWrap {
+  position: absolute;
+  z-index: -1;
+  filter: blur(124px);
+  opacity: 0.5;
+}
 .about .about-blurb .dark {
   border: 1px solid white;
 }
