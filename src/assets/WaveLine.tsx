@@ -22,11 +22,13 @@ export default function WaveLine(props:WaveLine) {
     }
     const waveLineVariantMain = {
         hidden: {
+            opacity: 0,
             scale: 1.8,
             y: -460,
             x: 300,
         },
         visible: {
+            opacity: 0.5,
             scale: [1.8, 1.85, 1.8, 1.75, 1.8],
             x: [300, 360, 300, 254, 300],
             // rotate: [0, 6, 0, -6, 0],
@@ -35,11 +37,13 @@ export default function WaveLine(props:WaveLine) {
     }
     const waveLineVariantSecondary = {
         hidden: {
+            opacity: 0,
             scale: 2,
             y: -540,
             x: 560,
         },
         visible: {
+            opacity: 0.5,
             scale: [2, 1.95, 2, 2.2, 2],
             // x: [300, 360, 300, 254, 300],
             transition: waveLineTransition,
@@ -71,8 +75,8 @@ export default function WaveLine(props:WaveLine) {
                     fill="none"
                     stroke-width={lineWidth}
                     stroke={strokeColor}
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
+                    initial={{ pathLength: 0, opacity: 0 }}
+                    animate={{ pathLength: 1, opacity: 1 }}
                     transition={mainWave ? strokeTransitionMain : strokeTransitionSecondary}
                 />
             </motion.svg>
