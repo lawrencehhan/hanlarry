@@ -138,11 +138,15 @@ body {
   opacity: 0.4;
 }
 .main::before {
-  background: #EEE8A9;
+  // background: #EEE8A9;
+  // background: #86BA90;
+  background: #8090BC;
+  // z-index: 0;
   filter: url(#grainFilter);
 }
 .main.darkMain::before { 
   background: #2E6864;
+  
 }
 
 @media only screen and (min-width: 0rem) and (max-width: 42rem) {

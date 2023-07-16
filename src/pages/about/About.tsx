@@ -75,10 +75,13 @@ const AboutBlurb = (props:About) => {
                     I’m an engineer based in San Francisco, CA - specializing in data anlaysis and regenerative-biomaterial therapeutics. I graduated from the University of Virginia with a BS in Biomedical-Engineering, and a minor in Computer Science. 
                 </p>
                 <p>
-                    <br></br>somethingsomething on learning to code because of lab web/photography, then because of realizing how i could speed up data insights by using code at tempo, 
+                    <br></br>My journey into programming began during my time in academia when I needed to create a website for my lab and develop a web portfolio for my photography passion. These experiences sparked my interest in coding and its potential applications. 
                 </p>
                 <p>
-                    <br></br>somesomething about while having experience in the lab, passion in building software projects that complenemtn and boost research. 
+                    <br></br>As I progressed in my career, I joined Tempo Therapeutics, where I realized how coding could significantly enhance data analysis and accelerate insights. Witnessing the power of code in speeding up research processes, I became driven to explore software projects that complement and boost scientific endeavors.
+                </p>
+                <p>
+                    <br></br>With a solid foundation in the lab and a growing expertise in coding, I strive to bridge the worlds of science and technology. Join me as I combine my knowledge and passion to create innovative solutions that drive research forward.
                 </p>
             </motion.div>
             <motion.div className={`blurb-bubbleWrap ${darkMode && "dark"}`}

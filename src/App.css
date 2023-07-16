@@ -130,7 +130,7 @@ body #root .darkMain {
 }
 
 .main::before {
-  background: #EEE8A9;
+  background: #8090BC;
   filter: url(#grainFilter);
 }
 
