@@ -91,6 +91,7 @@ body #root .darkMain {
   justify-content: center;
   background-color: #2a2b2a00;
   font-family: "Bebas Neue", "Plus Jakarta Sans", "Vazirmatn", sans-serif;
+  overflow-x: hidden;
 }
 .app .dark {
   background-color: #2a2b2a00;

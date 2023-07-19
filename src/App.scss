@@ -101,6 +101,7 @@ body {
   justify-content: center;
   background-color: $transparent-bg;
   font-family: 'Bebas Neue', 'Plus Jakarta Sans', 'Vazirmatn', sans-serif;
+  overflow-x: hidden;
   .dark {
     background-color: $transparent-bg;
   }

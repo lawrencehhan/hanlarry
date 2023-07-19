@@ -38,8 +38,8 @@ export default function ProjectData() {
                 },
                 {
                     id: 9,
-                    title: 'Placeholder-Title',
-                    text: "Directed and compiled media for company data rooms used to support the company via venture pitches and product-use demos for collaborative partners. Additionally, Co-authored Instructions For Use (IFU) for human factors study submitted for FDA review.",
+                    title: 'Venture-Driven Media Direction and Collaboration',
+                    text: "Curated and orchestrated media content for our company's data rooms, strategically tailored to bolster venture pitches and product-use demos for collaborative partners. Additionally, Co-authored Instructions For Use (IFU) that was instrumental in a comprehensive human factors study ultimately submitted for FDA review.",
                     techList: ['Adobe Premiere Pro', 'Adobe After Effects', 'Adobe Illustrator'],
                     image: "synestify_example.png",
                     blob: 'blob_05.png',
