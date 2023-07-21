@@ -1,7 +1,6 @@
 .about {
     margin-top: 8vh;
     position: relative;
-    height: 98vh;
     height: 60rem;
     width: 88%;
     display: flex;
@@ -13,7 +12,6 @@
     .about-col {
         height: 90%;
     }
-    //font-family: 'Bebas Neue', 'Plus Jakarta Sans', 'Vazirmatn', sans-serif;
 
     // Column for Blurb Text
     .about-blurb {
@@ -40,6 +38,7 @@
         }
         .blurb-text {
             font-family: 'Vazirmatn';
+            font-weight: 200;
             display: flex;
             flex-direction: column; 
             align-items: center;
@@ -62,7 +61,6 @@
     }
     // Column for Detail Technologies
     .about-detail {
-        // border: 1px solid white;
         position: relative;
         align-self: end;
         align-content: center;
@@ -73,6 +71,7 @@
         height: 80%;
         z-index: 0;
         .detail-title {
+            font-family:  'Lora', 'Source Sans Pro';
             position: relative;
             display: flex;
             align-items:center;
@@ -81,17 +80,17 @@
             width: 330px;
             width: 40%;
             height: 330px;
-            // border: 1px solid white;
             .title-blob {
                 position: absolute;
                 z-index: 55;
                 width: 100%;
             }
             .title-text {
+                margin-left: -3%;
                 z-index: 56;
                 font-size: 2rem; 
                 text-align: center;
-                width: 90%;
+                width: 80%;
             }
             .dark {
                 color: black;
@@ -116,6 +115,8 @@
                 p {
                     margin-top: -12%;
                     font-size: .8rem;
+                    font-family: 'Vazirmatn';
+                    font-weight: 100;
                 }
             }
         }
@@ -145,7 +146,7 @@
             align-self: start;
             align-content: start;
             align-items: start;
-            height: 40%;
+            height: 24rem;
             .detail-title{
                 height: 50%;
                 width: 60%;

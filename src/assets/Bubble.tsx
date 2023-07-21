@@ -17,7 +17,7 @@ export default function Bubble(props:Bubble) {
         delay: 4,
         repeat: Infinity,
         repeatType: undefined,
-        duration: 24,
+        duration: 12,
         ease: "easeInOut",
     }
     const bubbleVariant = {

@@ -1,7 +1,6 @@
 .about {
   margin-top: 8vh;
   position: relative;
-  height: 98vh;
   height: 60rem;
   width: 88%;
   display: flex;
@@ -36,6 +35,7 @@
 }
 .about .about-blurb .blurb-text {
   font-family: "Vazirmatn";
+  font-weight: 200;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,6 +67,7 @@
   z-index: 0;
 }
 .about .about-detail .detail-title {
+  font-family: "Lora", "Source Sans Pro";
   position: relative;
   display: flex;
   align-items: center;
@@ -82,10 +83,11 @@
   width: 100%;
 }
 .about .about-detail .detail-title .title-text {
+  margin-left: -3%;
   z-index: 56;
   font-size: 2rem;
   text-align: center;
-  width: 90%;
+  width: 80%;
 }
 .about .about-detail .detail-title .dark {
   color: black;
@@ -111,6 +113,8 @@
 .about .about-detail .detail-techs .tech-icon p {
   margin-top: -12%;
   font-size: 0.8rem;
+  font-family: "Vazirmatn";
+  font-weight: 100;
 }
 .about .about-detail .detail-blob {
   position: absolute;
@@ -132,7 +136,7 @@
     align-self: start;
     align-content: start;
     align-items: start;
-    height: 40%;
+    height: 24rem;
   }
   .about .about-detail .detail-title {
     height: 50%;
