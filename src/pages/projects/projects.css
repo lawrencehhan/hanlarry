@@ -6,9 +6,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 .projects .projects-main-title {
+  font-family: "Lora";
   font-size: 1.25rem;
   align-self: flex-start;
   position: block;
@@ -135,7 +136,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    font-family: "Plus Jakarta Sans", sans-serif;
   }
   .projects .projects-main-title {
     align-self: flex-start;

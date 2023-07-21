@@ -5,7 +5,7 @@ export default function ProjectData() {
                     id: 1,
                     title: "Synestify",
                     text: "Synestify is a web-app that analyzes an uploaded image and user-preferences to recommend curated songs that reflect the image's visual cues. The analysis matches tone, hue, brightness, user-data, etc. to musical values accepted by Spotify's public API to utilize its recommendation engine.",
-                    techList: ['Python', 'Flask', 'Pandas', 'Scikit-learn', 'Plotly', 'Spotify API'],
+                    techList: ['ReactJS', 'Python', 'Flask', 'Pandas', 'Scikit-learn', 'Plotly', 'Spotify API'],
                     image: "synestify_example.png",
                     blob: "blob_01.png",
                     link: "https://github.com/lawrencehhan/synestify",

@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 .about .about-col {
   height: 90%;
@@ -25,6 +25,7 @@
   z-index: 100;
 }
 .about .about-blurb .blurb-title {
+  font-family: "Lora";
   display: flex;
   align-items: center;
   justify-content: left;
@@ -34,6 +35,7 @@
   border: 1px solid black;
 }
 .about .about-blurb .blurb-text {
+  font-family: "Vazirmatn";
   display: flex;
   flex-direction: column;
   align-items: center;

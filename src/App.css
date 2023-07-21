@@ -90,7 +90,7 @@ body #root .darkMain {
   padding-top: 7vh;
   justify-content: center;
   background-color: #2a2b2a00;
-  font-family: "Bebas Neue", "Plus Jakarta Sans", "Vazirmatn", sans-serif;
+  font-family: "Lora", "Source Sans Pro", "Bebas Neue", "Plus Jakarta Sans", "Vazirmatn", sans-serif;
   overflow-x: hidden;
 }
 .app .dark {

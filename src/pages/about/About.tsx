@@ -72,16 +72,16 @@ const AboutBlurb = (props:About) => {
             animate={controls}
             variants={blurbText}>
                 <p>
-                    I’m an engineer based in San Francisco, CA - specializing in data anlaysis and regenerative-biomaterial therapeutics. I graduated from the University of Virginia with a BS in Biomedical-Engineering, and a minor in Computer Science. 
+                    Hello there! I'm an engineer based in San Francisco, CA - specializing in data anlaysis and regenerative-biomaterial therapeutics. I graduated from the University of Virginia with a BS in Biomedical-Engineering, and a minor in Computer Science. 
                 </p>
                 <p>
-                    <br></br>My journey into programming began during my time in academia when I needed to create a website for my lab and develop a web portfolio for my photography passion. These experiences sparked my interest in coding and its potential applications. 
+                    <br></br>While I was introduced to coding through my formal education, my real journey into programming started with a desire for practical applications. I found myself needing applicable programming skills to address various facets of my life. Whether it was creating a website for my research lab, crafting professional photography portfolios, or accelerating data analysis during lab hours, coding became an invaluable tool that brought my ideas to life.
                 </p>
                 <p>
-                    <br></br>As I progressed in my career, I joined Tempo Therapeutics, where I realized how coding could significantly enhance data analysis and accelerate insights. Witnessing the power of code in speeding up research processes, I became driven to explore software projects that complement and boost scientific endeavors.
+                    <br></br>As I progressed in my career and joined Tempo Therapeutics, I experienced firsthand the real potential of code in real-world practice. No longer just an individual endeavor, programming became a collaborative effort that transformed the way our research team operated - and by exploring new languages, models, and tools, I was able to grow by enhancing our data analysis capabilities and accelerate our team's insights.
                 </p>
                 <p>
-                    <br></br>With a solid foundation in the lab and a growing expertise in coding, I strive to bridge the worlds of science and technology. Join me as I combine my knowledge and passion to create innovative solutions that drive research forward.
+                    <br></br>Fast-forward, and I'm standing at the intersection of a passion for coding and the evolving landscape of technology!
                 </p>
             </motion.div>
             <motion.div className={`blurb-bubbleWrap ${darkMode && "dark"}`}
