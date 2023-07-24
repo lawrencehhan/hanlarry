@@ -21,7 +21,7 @@ export default function DarkToggle(props: DarkProp) {
             }
         }
     }
-    console.log('DarkMode On: '+ darkMode)
+
     return (
         <motion.div 
             className="button-row"
