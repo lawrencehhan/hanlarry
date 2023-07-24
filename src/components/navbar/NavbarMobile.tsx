@@ -20,7 +20,7 @@ export default function Navbar(props:NavbarMobile) {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 1,
+                duration: 0.5,
                 ease: "easeInOut"
             }
         },
@@ -28,7 +28,7 @@ export default function Navbar(props:NavbarMobile) {
             opacity: 0,
             y: -200,
             transition: {
-                duration: 3,
+                duration: 1,
                 ease: "easeInOut"
             }
         }
@@ -42,18 +42,6 @@ export default function Navbar(props:NavbarMobile) {
             variants={navbarVariants}
             key="something"
             >  
-                {/* Background Gradient */}
-                {/* <motion.svg className="background-svg">
-                    <motion.circle
-                        className="background-circle"
-                        cx="160"
-                        cy="120"
-                        r="40"
-                        fill="#6CC0F2"
-                        filter={darkMode ? "blur(70px)" : "blur(40px)"}
-                        >    
-                    </motion.circle>
-                </motion.svg> */}
                 {/* DarkMode Toggle */}
                 <DarkToggle darkMode={darkMode} handleDarkToggle={handleDarkToggle} isMobile={true}/>
                 {/* Navbar Items */}

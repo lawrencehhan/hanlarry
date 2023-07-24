@@ -124,19 +124,27 @@
 @media only screen and (min-width: 0rem) and (max-width: 42rem) {
   .about {
     margin-top: 6vh;
+    height: 90rem;
+    width: 100%;
   }
   .about .about-col {
-    width: 100vw;
+    width: 100%;
   }
   .about .about-blurb {
     align-content: center;
-    height: 55%;
+    height: 75%;
+    width: 100%;
+  }
+  .about .about-blurb .blurb-title, .about .about-blurb .blurb-text {
+    width: 84%;
+    padding: 1rem;
   }
   .about .about-detail {
     align-self: start;
     align-content: start;
     align-items: start;
-    height: 24rem;
+    height: 22%;
+    width: 84%;
   }
   .about .about-detail .detail-title {
     height: 50%;
@@ -161,6 +169,7 @@
     bottom: 0%;
   }
   .about .blurb-bubbleWrap {
+    margin-top: -50vh;
     max-width: 50%;
     overflow: hidden;
   }

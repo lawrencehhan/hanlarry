@@ -25,7 +25,7 @@ body #root .darkMain {
 }
 
 .navbar {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Source Sans Pro", "Vazirmatn", sans-serif;
   font-size: 1rem;
   list-style-type: none;
   background-color: #FCF7FF;
@@ -44,7 +44,7 @@ body #root .darkMain {
   justify-content: right;
 }
 .navbar li a {
-  padding-right: 1.5rem;
+  padding-right: 1.75rem;
   position: relative;
 }
 .navbar li a::after {
@@ -148,17 +148,17 @@ body #root .darkMain {
     margin-bottom: auto;
     right: 4vw;
     align-self: center;
-    z-index: 1005;
+    z-index: 1105;
   }
 
   .navbar-mobile {
-    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: "Source Sans Pro", "Vazirmatn", sans-serif;
     font-size: 1rem;
     list-style-type: none;
     border-bottom: 1px solid black;
     position: fixed;
     position: -webkit-fixed;
-    height: 23vh;
+    height: 24vh;
     margin: 0;
     top: 0;
     padding-top: 7vh;
@@ -168,7 +168,7 @@ body #root .darkMain {
     justify-content: center;
     align-items: center;
     z-index: 1004;
-    background-color: #FCF7FFB3;
+    background-color: #FCF7FF;
   }
   .navbar-mobile li {
     width: 100%;
@@ -191,7 +191,7 @@ body #root .darkMain {
 
   .navbar-mobile.dark {
     border-bottom: 1px solid white;
-    background-color: #2A2B2AB3;
+    background-color: #2A2B2A;
   }
 }
 

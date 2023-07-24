@@ -93,9 +93,9 @@ export default function HomeText(props:HomeText) {
             initial='hidden'
             animate='visible'
         >
-            <AnimatedLetters title={"HI, WELCOME"} className={"home-text-title"} />
+            <AnimatedLetters title={"Hi, Welcome"} className={"home-text-title"} />
             <AnimatedLetters title={"my name is Lawrence Han"} className={"home-text-intro"} highlight={true}/>
-            <AnimatedLetters title={"I am an engineer based in San Francisco"} className={"home-text-passage"} />
+            <AnimatedLetters title={"an engineer based in San Francisco, CA"} className={"home-text-passage"} />
         </motion.div>
     )
 }

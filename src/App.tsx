@@ -62,7 +62,6 @@ export default function App() {
   const handleOpen = () => {
     setIsOpen(prevIsOpen => !prevIsOpen)
   }
-  console.log(isMobile)
 
   // Framer-Motion variants for loading background gradient canvas
   const loadingVariants = {
@@ -100,8 +99,10 @@ export default function App() {
         isOpen={isOpen}
         handleOpen={handleOpen}
         handleDarkToggle={handleDarkToggle}/>
-
-      <div className={`app`}>
+      <div 
+        className={`app`}
+        onClick={() => setIsOpen(false)}
+      >
         <Home darkMode={darkMode} homeRef={homeRef} isMobile={isMobile} />
         <About darkMode={darkMode} aboutRef={aboutRef} />
         <Projects darkMode={darkMode} projectRef={projectRef} />

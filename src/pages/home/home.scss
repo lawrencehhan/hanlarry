@@ -27,7 +27,7 @@
     filter: blur(42px);
     transform: scale(2);
   }
-  //font-family: 'Bebas Neue', 'Plus Jakarta Sans', 'Vazirmatn', sans-serif;
+  
   .home-col {
     position: relative;
     display: flex;
@@ -66,7 +66,7 @@
         background-image: linear-gradient(-120deg, #e0afa01d, #b4d5fe92 95%, #88d4984f);
         border-radius: 1rem 0 1rem 0;
         padding: 3px 6px;
-        z-index: 1;
+        z-index: 0;
       }
     }
     .home-text-intro > * {
@@ -111,6 +111,7 @@
 // 43rem, 62rem, 
 @media only screen and (min-width: 0rem) and (max-width: 42rem) {
   .home-container {
+    margin-top: 4vh;
     height: 80vh;
     overflow: hidden; // for glasses container causing horizontal scroll during animation
     .svg-waveLine {
@@ -136,16 +137,22 @@
       text-align: center;
       padding-top: 2vh;
       .home-text-title {
-        font-size: 2.625rem; // 42px
+        font-size: 2rem; // 42px
       }
       .home-text-intro {
-        font-size: 1.5rem; // 24px
+        font-size: 1rem; // 24px
         margin-top: 1rem;
-        margin-bottom: 2.125rem;
+        margin-bottom: 1.5rem;
+        margin-left: 0;
         .highlightBox { 
           height: 1rem;
           width: 32%;
+          margin-top: 0.25rem;
         }
+      }
+      .home-text-passage {
+        margin-left: 0;
+        font-size: 0.75rem;
       }
     }
   }

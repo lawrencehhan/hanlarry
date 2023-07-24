@@ -22,7 +22,7 @@ export default function Navbar(props:Navbar) {
     const navbarVariants = {
         hidden: isFirstBoot ? { opacity: 0, } : {opacity: 0.42 },
         visible: {
-            opacity: 0.64,
+            opacity: 0.84,
             transition: {
                 delay: isFirstBoot ? 5 : 0,
                 duration: 1,
