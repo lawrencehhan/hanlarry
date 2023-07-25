@@ -124,7 +124,7 @@
 @media only screen and (min-width: 0rem) and (max-width: 42rem) {
   .about {
     margin-top: 6vh;
-    height: 90rem;
+    height: 100rem;
     width: 100%;
   }
   .about .about-col {
