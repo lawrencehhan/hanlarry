@@ -33,7 +33,7 @@ export default function ImgSynestify(props:Img) {
 
     return (
         <motion.a 
-            href={"https://github.com/lawrencehhan/synestify"}
+            href={"https://www.synestify.com"}
             target="_blank" 
             className="card-image card-link"
             ref={ref}

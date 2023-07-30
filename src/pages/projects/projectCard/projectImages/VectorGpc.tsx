@@ -91,7 +91,7 @@ export default function VectorGPC(props:Vector) {
 
 
     return (
-        <a href={"https://github.com/lawrencehhan/synestify"} target="_blank" className="card-image card-link">
+        <div className="card-image card-link">
             <motion.svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="364"
@@ -219,6 +219,6 @@ export default function VectorGPC(props:Vector) {
                 </linearGradient>
                 </defs>
             </motion.svg>
-        </a>
+        </div>
     )
 }

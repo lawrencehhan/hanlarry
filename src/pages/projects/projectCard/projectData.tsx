@@ -8,7 +8,7 @@ export default function ProjectData() {
                     techList: ['ReactJS', 'Python', 'Flask', 'Pandas', 'Scikit-learn', 'Plotly', 'Spotify API'],
                     image: "synestify_example.png",
                     blob: "blob_01.png",
-                    link: "https://github.com/lawrencehhan/synestify",
+                    link: "https://www.synestify.com/",
                 },
                 {
                     id: 3,
@@ -35,6 +35,7 @@ export default function ProjectData() {
                     techList: ['Python', 'BeautifulSoup4', 'Selenium', 'Pandas'],
                     image: "synestify_example.png",
                     blob: 'blob_04.png',
+                    link: 'https://github.com/lawrencehhan/richard-magic',
                 },
                 {
                     id: 9,

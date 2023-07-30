@@ -72,7 +72,7 @@ const AboutBlurb = (props:About) => {
             animate={controls}
             variants={blurbText}>
                 <p>
-                    Hello there! I'm an engineer based in San Francisco, CA - specializing in data anlaysis and regenerative-biomaterial therapeutics. I graduated from the University of Virginia with a BS in Biomedical-Engineering, and a minor in Computer Science. 
+                    Hello there! I'm an engineer based in Northern Virginia - specializing in data analysis and regenerative-biomaterial therapeutics. I graduated from the University of Virginia with a BS in Biomedical-Engineering, and a minor in Computer Science. 
                 </p>
                 <p>
                     <br></br>While I was introduced to coding through my formal education, I 'really' began programming as my day-to-day routines started necessitating it. I found myself needing applicable programming skills to address various facets of my life. Whether it was creating a website for my research lab, crafting professional photography portfolios, or accelerating data analysis during lab hours, coding became an invaluable tool that brought my ideas to life.
